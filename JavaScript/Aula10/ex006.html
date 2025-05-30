@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <!--CSS-->
+    <style>
+        div#area {
+            font: normal TimesNewRoman;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area">
+        Interaja
+    </div>
+
+    <!--JavaScript-->
+    <script>
+
+        //Se eu deixo essa variável FORA, ele SERVE para TODAS as funções
+        //Se eu deixar DENTRO de uma FUNÇÃO, ele só serve para aquela
+        var a = window.document.getElementById('area') 
+
+        //Utilizamos esse evento para que o JS "escute" o HTML e preste atenção em TODOS os eventos que estão ocorrendo, sem poluiro HTML(div)
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
+        function clicar(){ //TUDO o que estiver aqui só vai ser chamado quando eu chamar o clicar
+            a.innerText = 'Clicou!'
+            a.style.background = 'black'
+        }
+
+        function entrar(){
+            a.innerText = 'Entrou!'
+            a.style.background = 'red'
+        }
+
+        function sair(){
+            a.innerText = 'Saiu!!'
+            a.style.background = 'green'
+        }
+    </script>
+</body>
+
+</html>

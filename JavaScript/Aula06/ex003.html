@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu TERCEIRO programa...</title>
+
+    <style>
+        body{
+            background-color: rgb(100, 100, 255);
+            color: white;
+            font: normal 20pt TimesNewRoman; /*25pt é o tamanho*/ 
+        }
+
+        h1{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <p>Já me livrei da maldição</p>
+
+    <script>
+        // window.prompt('Teste') //Esse comando retrata o que eu for digitar como uma string, mesmo se for um número
+        //var n1 = Number.parseInt(window.prompt('Digite um número FLUTUANTE: ')) 
+        //var n2 = Number.parseFloat(window.prompt('Digite um número FLUTUANTE: '))
+
+        //Posso utilizar APENAS number também, nisso o JS identifica o que é ou não inteiro
+
+        var n1 = Number(window.prompt('Digite um número INTEIRO: '))
+        var n2 = Number(window.prompt('Digite um número FLUTUANTE: ')) 
+        var resultado = n1 + n2
+        window.alert (`A soma entre ${n1} e ${n2} é igual a: ` + String(resultado)) //O + também tem efeito de concatenação
+    </script>                <!--Posso usar tanto s.toString, quanto String()-->
+</body>
+
+</html>
