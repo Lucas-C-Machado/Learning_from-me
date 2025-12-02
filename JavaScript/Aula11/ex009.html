@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu sou da onde?</title>
+</head>
+
+<!--CSS-->
+<style>
+    h1 {
+       background: red;
+       font: normal;
+       color: white;
+    }
+    body {
+        font: normal 15pt TimesNewRoman;
+        background: green;
+        color: white;
+    }
+</style>
+
+<body>
+    
+    <h1>Eu sou da onde?</h1>
+    <div>
+        Insira da onde você é <input id="txt1" name="txt1">
+        <input type="button" value="Enviar" onclick="lugar()">
+    </div>
+
+    <div id="onde">
+        Eu sou de qual cidade? 
+    </div>
+
+
+    <script>
+
+        var r = window.document.getElementById('txt1')
+        var onde = window.document.getElementById('onde')
+
+        function lugar(){
+            var cidade = r.value
+
+            if (cidade == 'Santa Maria'){
+                onde.innerText = `Eu sou de Santa Maria!`
+            }
+            else {
+                onde.innerText = `Eu sou de ${cidade}, não sou de Santa Maria!`
+            }
+        }
+        
+    </script>
+</body>
+</html>

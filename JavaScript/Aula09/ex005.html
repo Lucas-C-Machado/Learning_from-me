@@ -1,0 +1,48 @@
+<!--Exercício 5 da Aula09 - Curso JavaScript-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--Cabeça do Site-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Estilização do Site-->
+    <style>
+        body {
+            background: rgb(0, 128, 255);
+            color: white;
+            font: normal 10pt TimesNewRoman;        
+        }
+    </style>
+
+</head>
+
+<!--Corpo do Site-->
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class = "msg">Clique em mim</br></br></div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0] //Aqui eu faço a procuração de uma tag e o [] significa qual elemento eu estou selecionando, sendo 0 o nosso primeiro parágrafo
+        
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+
+    </script>
+
+<!--Fim do Corpo do Site-->
+</body>
+
+<!--Fim do Site-->
+</html>

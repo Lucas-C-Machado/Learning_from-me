@@ -1,0 +1,54 @@
+<!--Este é um site que faz integração com o nosso relógio
+automático e atualiza a cada carregamento de página-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Idade</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<!--Corpo do Site-->
+<body>
+
+    <!--Cabeçalho do Site-->
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <!--Informações Diversas-->
+    <section>
+        <!--Primeira DIV-->
+        <div>
+            <p>Ano de Nascimento</p>
+                <input type="number" name="txtano" id="txtano" min="0"> <!--Posso atribuir um valor mínimo (min) e um valor máximo (max)-->
+            </p>
+            <p>Sexo: 
+                <input type="radio" name="radsex" id ="mas" checked> <!--Trabalhamos com o mesmo nome no radsex para poder marcar apenas um, se fosse nome diferente dava pra marcar mais de um-->
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+
+        <!--Segunda DIV-->
+        <div id="res">
+            <p>Preencha os dados acima para ver o resultado!</p>
+        </div>
+    </section>
+
+    <!--Rodapé do Site-->
+    <footer>
+        <p>&copy; Curso em Vídeo</p> <!--Copywrite-->
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+<!--Fim do Site-->
+</html>
