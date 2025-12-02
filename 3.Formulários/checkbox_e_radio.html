@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chackbox e Radio</title>
+</head>
+<body>
+    <form method="GET">
+        <h3>Você selecionou: Pizza de Calabresa</h3>
+        <p>Quais opcionais você deseja?</p>
+        <input type="checkbox" name="opcional[]" value="queijo" disabled />+ queijo (indisponível)</br>
+        <input type="checkbox" name="opcional[]" value="calabresa" />+ calabresa </br>
+        <input type="checkbox" name="opcional[]" value="cebola" />+ cebola </br>
+        <input type="checkbox" name="opcional[]" value="azeitona" />+ azeitona </br></br>
+
+        <p>Borda recheada</p>
+        <input type="radio" name="borda" value="sim" />Sim
+        <input type="radio" name="borda" value="nao" />Não </br></br>
+
+        <p>Bebida</p>
+        <input type="radio" name="bebida" value="suco" />Suco </br>
+        <input type="radio" name="bebida" value="refrigerante" />Refrigerante </br>
+        <input type="radio" name="bebida" value="agua" />Água </br>
+        <input type="radio" name="bebida" value="nenhum" />Nenhum </br></br>
+
+        <button>Enviar pedido</button>
+    </form>
+</body>
+</html>
