@@ -1,0 +1,69 @@
+# -------------------------------------------------------------
+# Workflow: CodeQL Analysis
+# Objetivo: analisar o código automaticamente e detectar problemas de segurança, erros lógicos e vulnerabilidades.
+# Este arquivo faz parte da automação do GitHub Actions e roda
+# sempre que alguém enviar mudanças ou abrir um Pull Request.
+
+name: "CodeQL Analysis"   # Nome do workflow exibido no GitHub Actions
+
+# -------------------------------------------------------------
+# Quando esse workflow deve ser executado?
+# -------------------------------------------------------------
+on:
+  push:
+    branches: [ main ]     # Executa análises quando alguém envia código para a branch main
+  pull_request:
+    branches: [ main ]     # Executa a cada Pull Request direcionado para a main
+  schedule:
+    - cron: '0 2 * * 2'    # Roda automaticamente toda terça-feira às 02:00 UTC (varredura periódica)
+
+# -------------------------------------------------------------
+# Definição dos JOBS: cada job é um conjunto de etapas (steps to steps, ou seja, passo a passo)
+# -------------------------------------------------------------
+jobs:
+  analyze:
+    name: Analyze Code           # Nome amigável do job
+    runs-on: ubuntu-latest       # Ambiente virtual onde o workflow irá rodar (Linux Ubuntu)
+
+    # ---------------------------------------------------------
+    # Permissões necessárias para o CodeQL funcionar corretamente
+    # ---------------------------------------------------------
+    permissions:
+      actions: read              # Permite leitura das ações
+      contents: read             # Permite ler o repositório
+      security-events: write     # Permite enviar resultados de análise para a aba "Security"
+
+    # ---------------------------------------------------------
+    # Estratégia: aqui podemos definir linguagens ou variações
+    # Este exemplo só verifica JavaScript, mas pode ser expandido.
+    # ---------------------------------------------------------
+    strategy:
+      fail-fast: false           # Continua rodando mesmo se um item da matrix falhar
+      matrix:
+        language: [ 'javascript' ]   # Linguagem analisada pelo CodeQL
+
+    # ---------------------------------------------------------
+    # Etapas da análise
+    # ---------------------------------------------------------
+    steps:
+    # 1) Baixar o código do repositório
+    - name: Checkout repository
+      uses: actions/checkout@v4   # Ação oficial que baixa o código no ambiente de execução
+
+    # 2) Inicializar o CodeQL
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}  # Linguagens definidas acima na matrix
+
+    # 3) Etapa de build
+    # Repositórios HTML não precisam de build, então mostramos apenas uma mensagem educativa
+    - name: Build
+      run: |
+        echo "No build step needed for HTML-only repository."
+    # Aqui estariam comandos como npm install, npm run build, etc... Caso fossem necessários.
+
+    # 4) Executar de fato a análise do CodeQL
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      # Esta etapa envia os resultados para a aba "Security" -> "Code scanning alerts"
