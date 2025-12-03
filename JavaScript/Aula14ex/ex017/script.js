@@ -1,3 +1,12 @@
+// Escape HTML special characters in a string
+function escapeHTML(str) {
+    return str.replace(/&/g, "&amp;")
+              .replace(/</g, "&lt;")
+              .replace(/>/g, "&gt;")
+              .replace(/"/g, "&quot;")
+              .replace(/'/g, "&#39;");
+}
+
 function tabuada() {
 
     // Declarando as variáveis
@@ -9,14 +18,14 @@ function tabuada() {
         window.alert('Erro! Não foi informado o número.');
     } else {
         // Limpa o conteúdo anterior
-        tabuada.innerHTML = `Tabuada do número ${numero.value}: <br>`;
+        tabuada.innerHTML = `Tabuada do número ${escapeHTML(numero.value)}: <br>`;
 
         // Conversão de string para número
         var n = Number(numero.value);
 
         // Gerando a tabuada
         for (var c = 1; c <= 10; c++) {
-            tabuada.innerHTML += `\u{1F449} ${n} x ${c} = ${n * c} <br>`;
+            tabuada.innerHTML += `\u{1F449} ${escapeHTML(n.toString())} x ${c} = ${escapeHTML((n * c).toString())} <br>`;
         }
     }
 }
