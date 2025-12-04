@@ -1,297 +1,299 @@
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=2ECC71&center=true&vCenter=true&width=800&lines=Bem-vindo+à+minha+jornada+de+aprendizado!" alt="Efeito de digitação" />
-  <br/>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=3498DB&center=true&vCenter=true&width=800&lines=Codificando+todos+os+dias!" alt="Efeito de digitação" />
-  <br/>
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=E67E22&center=true&vCenter=true&width=800&lines=Aprimorando+habilidades!" alt="Efeito de digitação" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=2ECC71&center=true&vCenter=true&width=800&lines=Welcome+to+my+learning+journey!" alt="Typing effect" />
+
+<br/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=3498DB&center=true&vCenter=true&width=800&lines=Coding+every+day!" alt="Typing effect" />
+
+<br/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&pause=700&color=E67E22&center=true&vCenter=true&width=800&lines=Improving+skills!" alt="Typing effect" />
 </p>
 
 <br/>
 
-<h1 align="center">🚀 APRENDENDO COMIGO 📚💻</h1>
+<h1 align="center">🚀 LEARNING WITH ME 📚💻</h1>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
-</p>
-
+<p align="center"> 
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> 
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> 
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> 
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> 
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" /> 
+<img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" /> 
+<img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" />
 
 <br/>
+
 ________________________________________________
 
-## 🎯 SOBRE O REPOSITÓRIO
+## 🎯 ABOUT THE REPOSITORY
 
-> “Transformando conhecimento em código e evolução.”
+> “Transforming knowledge into code and evolution.”
 
-Este repositório foi criado para:
+This repository was created to:
 
-✅ Compartilhar meus aprendizados.  
-✅ Exibir meu progresso na área de tecnologia.  
-✅ Ajudar outros a aprender sobre linguagens de programação e frameworks.  
-✅ Apresentar projetos e experiências no meu [LinkedIn](https://www.linkedin.com/in/lucas-c-machado-80090b307/).
+✅ Share my learnings.
 
-<br/>
+✅ Showcase my progress in the technology field.
+
+✅ Help others learn about programming languages ​​and frameworks.
+
+✅ Present projects and experiences on my [LinkedIn](https://www.linkedin.com/in/lucas-c-machado-80090b307/).
+
 ________________________________________________
 
-## 🗂 ESTRUTURA DO REPOSITÓRIO
+## 🗂 REPOSITORY STRUCTURE
 
-Cada *pasta* representa uma área de aprendizado (linguagem, framework ou tecnologia).  
-Dentro de cada uma, você encontrará:
+Each *folder* represents a learning area (language, framework, or technology).
 
-- Projetos práticos  
-- Exemplos de código  
-- Exercícios resolvidos  
-- Notas e documentação  
+Within each one, you will find:
 
-<br/>
+- Practical projects
+
+- Code examples
+
+- Solved exercises
+
+- Notes and documentation
+
 ________________________________________________
 
-
-<h2>🚀 TECNOLOGIAS QUE UTILIZO NO MEU DIA A DIA</h2>
+<h2>🚀 TECHNOLOGIES I USE IN MY DAY-TO-DAY WORK</h2>
 
 <p>
-  Aqui estão as principais ferramentas e tecnologias que utilizo no meu fluxo de estudo e desenvolvimento.  
-  Cada uma delas faz parte da base que estou construindo para me tornar um desenvolvedor cada vez mais completo.
+Here are the main tools and technologies I use in my learning and development workflow.
+
+Each one is part of the foundation I'm building to become an increasingly complete developer.
+
 </p>
 
 <br/>
 
 <div align="left">
 
-  <ul>
-    <li>🧩 <strong>HTML5</strong> – Estruturação semântica e construção de interfaces web.</li>
-    <li>🎨 <strong>CSS3</strong> – Estilização moderna, responsividade e boas práticas de layout.</li>
-    <li>⚡ <strong>JavaScript (ES6+)</strong> – Lógica, manipulação do DOM, consumo de APIs e interatividade.</li>
-    <li>⚛️ <strong>React.js</strong> – Componentização, hooks, estados e construção de interfaces dinâmicas.</li>
-    <li>🌀 <strong>Typescript</strong> – Tipagem estática, segurança no código e escalabilidade.</li>
-    <li>🌬️ <strong>TailwindCSS</strong> – Estilos utilitários rápidos, organizados e altamente produtivos.</li>
-    <li>🛠️ <strong>Git</strong> – Versionamento profissional, branches, merges e boas práticas.</li>
-    <li>🐙 <strong>GitHub</strong> – Repositórios, Pull Requests, Issues e automações com GitHub Actions.</li>
-  </ul>
+<ul>
+
+<li>🧩 <strong>HTML5</strong> – Semantic structuring and web interface construction.</li>
+<li>🎨 <strong>CSS3</strong> – Modern styling, responsiveness, and layout best practices.</li>
+<li>⚡ <strong>JavaScript (ES6+)</strong> – Logic, DOM manipulation, API consumption, and interactivity.</li>
+<li>⚛️ <strong>React.js</strong> – Componentization, hooks, states, and dynamic interface construction.</li>
+
+<li>🌀 <strong>Typescript</strong> – Static typing, code security, and scalability.</li>
+
+<li>🌬️ <strong>TailwindCSS</strong> – Fast, organized, and highly productive utility styles.</li>
+
+<li>🛠️ <strong>Git</strong> – Professional version control, branches, merges, and best practices.</li>
+
+<li>🐙 <strong>GitHub</strong> – Repositories, Pull Requests, Issues, and automations with GitHub Actions.</li>
+
+</ul>
 
 </div>
 
-<br/>
 ________________________________________________
 
-<h2>📚 COMO ESTE REPOSITÓRIO FUNCIONA</h2>
+<h2>📚 HOW THIS REPOSITORY WORKS</h2>
 
-<p>
-  Este repositório foi projetado para manter um aprendizado organizado, limpo e fácil de navegar.  
-  Cada linguagem, framework ou tecnologia possui sua própria pasta com uma estrutura padrão pensada para facilitar revisões, prática e evolução contínua.
-</p>
+<p> This repository is designed to keep learning organized, clean, and easy to navigate. Each language, framework, or technology has its own folder with a standard structure designed to facilitate reviews, practice, and continuous evolution. </p>
 
-<br/>
-
-<h3>📁 Estrutura padrão das pastas</h3>
+<h3>📁 Standard folder structure</h3>
 
 <pre>
-📂 LINGUAGEM/
-┣ 📁 1.Basicos/
-┣ 📁 2.Intermediario/
-┣ 📁 3.Projetos/
+📂 LANGUAGE/
+┣ 📁 1. Basics/
+┣ 📁 2. Intermediate/
+┣ 📁 3. Projects/
 ┣ 📄 README.md
-┗ 📁 Exercicios/
+┗ 📁 Exercises/
 </pre>
 
-<br/>
-
-<h3>📌 Legenda e propósito de cada pasta</h3>
+<h3>📌 Legend and purpose of each folder</h3>
 
 <ul>
-  <li><strong>1.Basicos/</strong> – Introdução, conceitos fundamentais e primeiros comandos.</li>
-  <li><strong>2.Intermediario/</strong> – Conceitos mais avançados, lógica, padrões e técnicas intermediárias.</li>
-  <li><strong>3.Projetos/</strong> – Pequenas aplicações completas, estudos de caso e desafios práticos.</li>
-  <li><strong>README.md</strong> – Documentação da linguagem, teoria, anotações e referências importantes.</li>
-  <li><strong>Exercicios/</strong> – Exercícios resolvidos para prática e acompanhamento de progresso.</li>
+<li><strong>1. Basics/</strong> – Introduction, fundamental concepts and first commands.</li>
+<li><strong>2. Intermediate/</strong> – More advanced concepts, logic, patterns and intermediate techniques.</li>
+
+<li><strong>3. Projects/</strong> – Small complete applications, case studies and challenges Practical exercises.</li>
+
+<li><strong>README.md</strong> – Language documentation, theory, notes, and important references.</li>
+
+<li><strong>Exercises/</strong> – Solved exercises for practice and progress tracking.</li>
 </ul>
 
 <br/>
 
 <p>
-  Essa estrutura foi criada para oferecer uma trilha de aprendizado clara e progressiva.  
-  Ela me ajuda a revisar conteúdos a qualquer momento e acompanhar minha evolução ao longo do tempo de forma visual e organizada.
+This structure was created to offer a clear and progressive learning path.
+
+It helps me review content at any time and track my progress over time in a visual and organized way.
+
 </p>
 
-<br/>
-
-<br/>
 ________________________________________________
 
-## 🌿 ESTRATÉGIA DE BRANCH (GIT WORKFLOW)
+## 🌿 BRANCH STRATEGY (GIT WORKFLOW)
 
-Este repositório utiliza um *fluxo de trabalho Git simples e limpo*, ideal para estudos e aprendizado contínuo.
+This repository uses a *simple and clean Git workflow*, ideal for continuous study and learning.
 
-### ✔ *main*  
-A branch principal — deve estar sempre *estável* e *organizada*.
+### ✔ *main* The main branch — should always be *stable* and *organized*.
 
-### ✔ *Feature branches (patch-x, fix-x, experiments)*  
-Essas branches são criadas automaticamente pelo GitHub ou para alterações pontuais, como:
+### ✔ *Feature branches (patch-x, fix-x, experiments)* These branches are created automatically by GitHub or for specific changes, such as:
 
-- Edições feitas diretamente pela interface web do GitHub.  
-- Correções rápidas de bugs.
-- Pull Requests automáticos.
+- Edits made directly through the GitHub web interface.
 
-*Exemplos Comuns:* Lucas-C-Machado-patch-1, alert-autofix-1.
+- Quick bug fixes.
 
-> *Observação:* Essas branches geralmente *não são criadas localmente*, apenas no repositório remoto.
+- Automatic Pull Requests.
 
-### 🔄 Comandos Úteis para o Repositório Local
+*Common Examples:* Lucas-C-Machado-patch-1, alert-autofix-1.
 
-Para atualizar seu repositório local sem baixar o conteúdo de todas as branches:
+> *Note:* These branches are generally *not created locally*, only in the remote repository.
+
+Useful Commands for the Local Repository
+
+To update your local repository without downloading the contents of all branches:
 
 ```bash
 git fetch
 ```
 
-Para listar as branches remotas:
+To list remote branches:
 
 ```bash
 git branch -r
 ```
 
-Para deletar branches remotas:
+To delete remote branches:
 
 ```bash
 git push origin --delete branch-name
 ```
 
-> *Importante:* O comando git branch -d *NÃO* deleta branches remotas — ele deleta apenas as locais.
+Important: The command `git branch -d` does *NOT* delete remote branches — it only deletes local ones.
 
-<br/>
-<br/>
 ________________________________________________
 
-## 👥 PÚBLICO-ALVO
+## 👥 TARGET AUDIENCE
 
-- 👶 *Iniciantes* aprendendo a codificar
-- 🕵 *Recrutadores* analisando minha evolução
-- 🚀 *Desenvolvedores* buscando inspiração ou referências
+- 👶 *Beginners* learning to code
+- 🕵 *Recruiters* analyzing my progress
+- 🚀 *Developers* seeking inspiration or references
 
-<br/>
 ________________________________________________
 
-## 💡 COMO USAR ESTE REPOSITÓRIO
+## 💡 HOW TO USE THIS REPOSITORY
 
-Você pode:
+You can:
 
-- Navegar pelas pastas
-- Clonar o repositório
-- Executar meus projetos
-- Estudar o código
+- Browse the folders
+- Clone the repository
+- Run my projects
+- Study the code
 
-Para clonar:
+To clone:
 
 ```bash
 git clone https://github.com/lucas-c-machado/Learning-from-me.git
 ```
-
-<br/>
 ________________________________________________
 
-## 🚧 O QUE ESTOU APRENDENDO AGORA
+## 🚧 WHAT I'M LEARNING NOW
 
-Esta lista será atualizada frequentemente:
+This list will be updated frequently:
 
-- HTML/CSS Avançado
+- Advanced HTML/CSS
 - JavaScript ES6+
 - Frameworks Front-end (React, Vue...)
-- Back-end com Node.js
-- APIs RESTful
-- Clean Code e melhores práticas
 
-<br/>
+- Back-end with Node.js
+- RESTful APIs
+- Clean Code and best practices
+
 ________________________________________________
 
-<h2>🔗 LINKS E RECURSOS ÚTEIS</h2>
+<h2>🔗 USEFUL LINKS AND RESOURCES</h2>
 
 <p>
-  Aqui estão algumas das minhas principais referências de estudo, inspiração e aprofundamento técnico.  
-  Esta curadoria reúne materiais reconhecidos mundialmente por sua qualidade e impacto no desenvolvimento de habilidades em tecnologia.
+Here are some of my main references for study, inspiration, and in-depth technical learning.
+
+This curated selection brings together materials recognized worldwide for their quality and impact on developing technology skills.
+
 </p>
 
 <br/>
 
-  <div align="left">
-  
-  <h3>📚 Livros Recomendados</h3>
+<div align="left">
+
+<h3>📚 Recommended Books</h3>
+
+<ul>
+<li>📖 <strong>Clean Code</strong> — Robert C. Martin<br/>
+<em>An essential classic on good practices, clean writing, and readable code.</em>
+
+</li>
+
+</br>
+
+<li>📖 <strong>You Don’t Know JS (Complete Series)</strong> — Kyle Simpson<br/>
+<em>A deep and modern reference for understanding JavaScript beyond the superficial.</em>
+
+</li>
+
+</br>
+
+<li>📖 <strong>Refactoring: Improving the Design of Existing Code</strong> — Martin Fowler<br/>
+<em>A practical approach to improving real code without altering behavior.</em>
+</li>
+
+</br>
+
+<li>📖 <strong>The Pragmatic Programmer — Andrew Hunt & David Thomas</strong></li>
+</ul>
+
+One of the most influential books on mindset, architecture, and good decisions as a developer.
+
+</br>
+
+<h3>🎥 Video Channels and Content</h3>
+<ul>
+<li><strong>🎬 Traversy Media — Clear, practical, and up-to-date content for web developers.</li></strong>
+<li><strong>🎬 The Net Ninja — Complete and didactic courses on JS, Node, React, and much more.</li></strong>
+<li><strong>🎬 Fireship — Quick, direct, and modern explanations of trends and technologies.</li></strong>
+</ul>
+</br>
+
+<h3>🎓 Free Platforms and Courses</h3>
   <ul>
-  <li>📖 <strong>Clean Code</strong> — Robert C. Martin<br/>
-  <em>Um clássico essencial sobre boas práticas, escrita limpa e legível de código.</em>
-  </li>
+  <li>🌐 freeCodeCamp — Complete tracks of JS, APIs, Front-end and Algorithms.</li>
+  <li>🧠 <strong>MDN Web Docs</strong> — Official and detailed documentation for the modern web.</li>
+  <li>🔍 <strong>W3Schools</strong> — Quick references and practical examples.</li>
+  </ul>
   </br>
+
+
+<h3>📝 Blogs and Communities</h3>
+<ul>
+<li>💻 <strong>Dev.to</strong> — Technical articles written by the community.</li>
+<li>💡 <strong>CSS-Tricks</strong> — Tutorials and best practices on CSS and Front-end.</li>
+<li>🔧 <strong>Stack Overflow</strong> — Discussions and solutions to real-world problems.</li>
+</ul>
+</br>
+
+<h3>👤 About me</h3>
+<p>Hello! I'm Lucas Camponogara Machado, a Front-end Developer passionate about technology, challenges, and continuous learning.</p>
   
-  <li>📖 <strong>You Don’t Know JS (Série Completa)</strong> — Kyle Simpson<br/>
-  <em>Referência profunda e moderna para entender JavaScript além do superficial.</em>
-  </li>
-  </br>
-  
-  <li>📖 <strong>Refactoring: Improving the Design of Existing Code</strong> — Martin Fowler<br/>
-  <em>Abordagem prática para melhorar código real sem alterar comportamento.</em>
-  </li>
-  </br>
-  
-  <li>📖 <strong>The Pragmatic Programmer</strong> — Andrew Hunt & David Thomas<br/>
-  <em>Um dos livros mais influentes sobre mindset, arquitetura e boas decisões como dev.</em>
-  </li>
-  </ul>
-  
-  </div>
-
-
-  <h3>🎥 Canais e Conteúdos em Vídeo</h3>
-  <ul>
-    <li>🎬 <strong>Traversy Media</strong> — Conteúdo claro, prático e atualizado para web developers.</li>
-    <li>🎬 <strong>The Net Ninja</strong> — Cursos completos e didáticos sobre JS, Node, React e muito mais.</li>
-    <li>🎬 <strong>Fireship</strong> — Explicações rápidas, diretas e modernas sobre tendências e tecnologias.</li>
-  </ul>
-
-  <h3>🎓 Plataformas e Cursos Gratuitos</h3>
-  <ul>
-    <li>🌐 <strong>freeCodeCamp</strong> — Trilhas completas de JS, APIs, Front-end e Algoritmos.</li>
-    <li>🧠 <strong>MDN Web Docs</strong> — Documentação oficial e detalhada para web moderna.</li>
-    <li>🔍 <strong>W3Schools</strong> — Referências rápidas e exemplos práticos.</li>
-  </ul>
-
-  <h3>📝 Blogs e Comunidades</h3>
-  <ul>
-    <li>💻 <strong>Dev.to</strong> — Artigos técnicos escritos pela comunidade.</li>
-    <li>💡 <strong>CSS-Tricks</strong> — Tutoriais e boas práticas sobre CSS e Front-end.</li>
-    <li>🔧 <strong>Stack Overflow</strong> — Discussões e soluções de problemas reais.</li>
-  </ul>
-
-  <h3>🌐 Meus Links</h3>
-  <ul>
-    <li>💼 <strong>Portfólio:</strong> <a href="https://lucas-c-machado.github.io/Portfolio/" target="_blank">Clique aqui</a></li>
-    <li>🔗 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/lucas-c-machado-80090b307/" target="_blank">Clique aqui</a></li>
-  </ul>
-
-</div>
-
-<br/>
+- 🌎 *Location:* Brazil
+- 💼 *Focus:* Front-end (HTML, CSS, JS, React, Typescript, Tailwind and Node.js.)
+- 🎯 *Objective:* To become a Senior Full Stack Developer and share knowledge
 ________________________________________________
 
-## 👤 SOBRE MIM
+## ❗ LICENSE
 
-Olá!
-Sou Lucas Camponogara Machado, um Desenvolvedor Front-end apaixonado por tecnologia, desafios e aprendizado contínuo.
+This repository does not have a specific license.
 
-- 🌎 *Localização:* Brasil
-- 💼 *Foco:* Front-end (HTML, CSS, JS, React, Typescript, Tailwind e Node.js.)
-- 🎯 *Objetivo:* Tornar-me um Desenvolvedor Full Stack Senior e compartilhar conhecimento
-
-<br/>
-________________________________________________
-
-## ❗ LICENÇA
-
-Este repositório não possui uma licença específica.
-
-<p align="center"> <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=1000&color=2ECC71&center=true&vCenter=true&width=435&lines=Aprendizado+Cont%C3%ADnuo!;Compartilhando+Conhecimento!;Rumo+ao+Full+Stack!" alt="Typing SVG" /> </p>
-<p align="center">Feito com ❤ por Lucas Camponogara Machado</p>
+<p align="center"> 
+  <img 
+    src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&duration=3000&pause=1000&color=2ECC71&center=true&vCenter=true&width=435&lines=Continuous+Learning!;Sharing+Knowledge!;Towards+Full+Stack!" 
+    alt="Typing SVG"/> 
+</p>
+<p align="center">Made with ❤ by Lucas Camponogara Machado</p>
