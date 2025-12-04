@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Botões no Formulário (corrigido)</title>
+</head>
+
+<body>
+    <h1>Botões e seus Tipos</h1>
+
+    <p>
+        Neste arquivo você vai entender como funcionam os botões dentro de um formulário HTML.
+        Todos os exemplos estão explicados passo a passo e com comentários no próprio código.
+    </p>
+
+    <!-- FORMULÁRIO PRINCIPAL -->
+    <form method="GET">
+
+        <h2>Campos do Formulário</h2>
+
+        <!-- Campo Nome -->
+        <label>Nome:</label>
+        <input type="text" name="name">
+        <br><br>
+
+        <!-- Campo Idade -->
+        <label>Idade:</label>
+        <input type="number" name="age">
+        <br><br>
+
+        <!-- Campo Senha -->
+        <label>Senha:</label>
+        <input type="password" name="password">
+        <br><br>
+
+        <hr>
+
+        <h2>Botão tipo "button"</h2>
+        <p>
+            Este tipo de botão NÃO envia o formulário.  
+            Ele serve apenas para executar ações através de <strong>JavaScript</strong>.
+            Os alertas que você verá só funcionam porque usamos JavaScript nos eventos.
+        </p>
+
+        <!-- Clique -->
+        <p><strong>• onclick — dispara ao clicar</strong></p>
+        <button type="button" onclick="alert('Você clicou no botão!')">
+            Clique aqui
+        </button>
+
+        <br><br>
+
+        <!-- Passar o mouse -->
+        <p><strong>• onmouseover — dispara ao passar o mouse</strong></p>
+        <button type="button" onmouseover="alert('Você passou o mouse aqui!')">
+            Passe o mouse aqui
+        </button>
+
+        <br><br>
+
+        <!-- Duplo clique -->
+        <p><strong>• ondblclick — dispara ao clicar duas vezes</strong></p>
+        <button type="button" ondblclick="alert('Clique duplo detectado!')">
+            Clique duplo
+        </button>
+
+        <br><br>
+
+        <!-- Mouse saiu -->
+        <p><strong>• onmouseout — dispara ao sair com o mouse</strong></p>
+        <button type="button" onmouseout="alert('O mouse saiu do botão!')">
+            Passe e saia do botão
+        </button>
+
+        <br><br>
+
+        <!-- Botão foco: corrigido para não causar loop -->
+        <p><strong>• onfocus — dispara ao focar no botão (corrigido)</strong></p>
+        <p style="max-width:600px;">
+            Observação: se o evento mostrar um alert() **sem remover o handler**, o fechamento do alerta
+            pode devolver o foco ao botão e disparar o evento novamente. Para evitar isso removemos
+            o atributo <code>onfocus</code> antes de chamar o alert().
+        </p>
+
+        <!-- Solução aplicada: remove o atributo onfocus na primeira execução -->
+        <button
+            type="button"
+            onfocus="this.removeAttribute('onfocus'); alert('O botão recebeu foco!');">
+            Clique TAB até mim
+        </button>
+
+        <br><br>
+        <hr>
+
+        <h2>Botão tipo "reset"</h2>
+        <p>Este botão limpa todos os campos do formulário.</p>
+
+        <button type="reset">Limpar</button>
+
+        <br><br>
+        <hr>
+
+        <h2>Botão tipo "submit"</h2>
+        <p>
+            Envia o formulário.  
+            Como estamos usando <strong>method="GET"</strong>, os dados aparecem na URL após o envio.
+        </p>
+
+        <button type="submit">Enviar</button>
+
+        <br><br>
+        <hr>
+
+        <h2>Mais Tipos de Botões</h2>
+
+        <p><strong>• &lt;input type="button"&gt;</strong> — versão antiga, ainda usada</p>
+        <input type="button" value="Botão input" onclick="alert('Botão input clicado!')">
+
+        <br><br>
+
+        <p><strong>• &lt;input type="submit"&gt;</strong> — envia o formulário</p>
+        <input type="submit" value="Enviar (input)">
+
+        <br><br>
+
+        <p><strong>• &lt;input type="reset"&gt;</strong> — limpa o formulário</p>
+        <input type="reset" value="Limpar (input)">
+
+        <br><br>
+
+        <p><strong>• Botão desabilitado</strong></p>
+        <button type="button" disabled>
+            Desabilitado (não funciona)
+        </button>
+
+        <br><br>
+
+        <p><strong>• Botão que envia para outro lugar (formaction)</strong></p>
+        <button type="submit" formaction="https://google.com">
+            Enviar para o Google
+        </button>
+
+        <br><br>
+
+        <p><strong>• Botão que muda o método (formmethod)</strong></p>
+        <button type="submit" formmethod="POST">
+            Enviar usando POST
+        </button>
+
+    </form>
+
+    <hr>
+
+    <!-- REFERÊNCIAS -->
+    <h2>Referências</h2>
+    <p>Abaixo estão documentos oficiais e guias práticos que usei como base — ótimos para aprofundar.</p>
+
+    <ul>
+        <li>
+            <strong>MDN — &lt;button&gt;</strong><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/button
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>MDN — &lt;input&gt; (tipos)</strong><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>MDN — &lt;form&gt; (documentação oficial)</strong><br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form" target="_blank">
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>MDN — Eventos de mouse e teclado</strong><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Element" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/API/Element
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>MDN — Acessibilidade (ARIA e boas práticas)</strong><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/Accessibility
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            <strong>Guia rápido sobre <code>alert()</code> e dialogs (MDN)</strong><br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

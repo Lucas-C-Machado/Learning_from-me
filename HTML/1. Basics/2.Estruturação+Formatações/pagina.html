@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página carregada pelo iframe</title>
+</head>
+<body>
+    <h2>Esta é a <em>pagina.html</em> (conteúdo local)</h2>
+    <p>Este conteúdo foi criado localmente e está sendo exibido dentro do iframe no arquivo <strong>iframes.html</strong>.</p>
+
+    <p>Você pode colocar qualquer HTML aqui: imagens, links, formulários, scripts (desde que respeitem políticas de segurança).</p>
+
+    <p>Data/hora de exemplo: <span id="now"></span></p>
+
+    <script>
+        // exemplo simples para mostrar que scripts dentro da página local funcionam
+        document.getElementById('now').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>

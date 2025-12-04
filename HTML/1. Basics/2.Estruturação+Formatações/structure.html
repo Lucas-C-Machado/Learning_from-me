@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral em HTML</title>
+</head>
+
+<body>
+
+    <h1 style="font-family: Arial;">Menu Lateral em HTML</h1>
+
+    <p style="font-family: Arial; max-width: 700px;">
+        Neste arquivo você verá como criar um <strong>menu lateral simples</strong> 
+        utilizando apenas HTML e estilos aplicados diretamente em cada elemento (<strong>sem usar arquivo CSS externo</strong>).
+        Tudo está comentado passo a passo para facilitar o entendimento.
+    </p>
+
+    <br>
+
+    <!-- ======================================================================
+         EXPLICAÇÃO DO PROCESSO DE CONSTRUÇÃO DO MENU
+         (Essa seção aparece no arquivo final como parte do conteúdo didático)
+    ======================================================================== -->
+    <h2 style="font-family: Arial;">Como este menu foi construído</h2>
+
+    <p style="font-family: Arial; max-width: 700px;">
+        <strong>1. Estrutura básica:</strong> criamos um elemento <code>&lt;div&gt;</code> chamado 
+        <code>menu-lateral</code>, que funciona como a “caixa” do menu.
+        <br><br>
+
+        <strong>2. Estilos aplicados diretamente:</strong> como solicitado, todo o CSS foi colocado 
+        no atributo <code>style</code> de cada elemento, sem usar o &lt;head&gt;.
+        <br><br>
+
+        <strong>3. Lista de navegação:</strong> utilizamos uma lista <code>&lt;ul&gt;</code> para 
+        representar os itens do menu, pois é a forma mais semântica e correta de criar menus.
+        <br><br>
+
+        <strong>4. Remoção dos marcadores:</strong> menus não usam os pontos da lista, então 
+        removemos com <code>list-style: none;</code>.
+        <br><br>
+
+        <strong>5. Estilização dos links:</strong> deixamos os links mais visíveis retirando o 
+        sublinhado e aplicando cor azul e negrito.
+        <br><br>
+
+        <strong>6. Comentários didáticos:</strong> todas as partes do código possuem explicações 
+        detalhadas para auxiliar no aprendizado dos alunos.
+    </p>
+
+    <br><br>
+
+    <!-- ======================================================================
+         MENU LATERAL
+         Estrutura HTML comentada e explicada
+    ======================================================================== -->
+
+    <!-- 
+        Este contêiner representa o menu lateral.
+        Ele está estilizado diretamente via "style".
+    -->
+    <div id="menu-lateral" 
+         style="width: 200px; 
+                border: 1px solid #000; 
+                padding: 10px; 
+                border-radius: 8px;
+                font-family: Arial;">
+
+        <!-- Título do menu -->
+        <h2 style="margin-top: 0;">Menu Lateral</h2>
+
+        <!-- 
+            Aqui está a lista de links do menu.
+            Cada <li> é um item do menu.
+        -->
+        <div id="links">
+
+            <!-- Lista sem marcadores -->
+            <ul style="list-style: none; padding-left: 0;">
+
+                <!-- ITEM 1 -->
+                <li style="margin-bottom: 10px;">
+                    <!-- 
+                        LINK DO MENU:
+                        - text-decoration: none -> remove o sublinhado
+                        - color: blue -> deixa azul
+                        - font-weight: bold -> deixa mais visível
+                    -->
+                    <a href="#"
+                       style="text-decoration: none; color: blue; font-weight: bold;">
+                       Link 1
+                    </a>
+                </li>
+
+                <!-- ITEM 2 -->
+                <li style="margin-bottom: 10px;">
+                    <a href="#"
+                       style="text-decoration: none; color: blue; font-weight: bold;">
+                       Link 2
+                    </a>
+                </li>
+
+                <!-- ITEM 3 -->
+                <li style="margin-bottom: 10px;">
+                    <a href="#"
+                       style="text-decoration: none; color: blue; font-weight: bold;">
+                       Link 3
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <!-- Nota explicativa -->
+        <p style="font-size: 14px; color: #444; margin-top: 10px;">
+            <strong>Observação:</strong> este menu ainda não está fixo na lateral da tela.
+            Isso será feito futuramente utilizando CSS avançado com <code>position: fixed;</code>.
+        </p>
+
+    </div>
+
+    <br><br>
+
+    <h2 style="font-family: Arial;">Referências</h2>
+    <ul style="font-family: Arial; max-width: 700px;">
+        <li>
+            Listas em HTML — MDN </br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/ul" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/ul
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            Links em HTML — MDN </br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            Div — MDN </br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/div" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/div
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

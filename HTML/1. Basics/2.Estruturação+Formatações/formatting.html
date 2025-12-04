@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag &lt;font&gt; (Descontinuada)</title>
+</head>
+
+<body>
+    <h1>Elemento &lt;font&gt;</h1>
+
+    <h2>O que é?</h2>
+    <p>
+        A tag <strong>&lt;font&gt;</strong> era usada antigamente no HTML para alterar 
+        <strong>cor</strong>, <strong>fonte</strong> e <strong>tamanho</strong> do texto.  
+        Porém, essa tag foi <strong>oficialmente descontinuada</strong> e não deve ser mais utilizada.
+    </p>
+
+    <h2>Por que não usar &lt;font&gt;?</h2>
+    <p>
+        Existem três motivos principais:
+    </p>
+
+    <ul>
+        <li><strong>Não é semântica</strong>, não adiciona significado ao conteúdo.</li>
+        <li><strong>Quebra a separação entre estrutura e estilo</strong>, mistura HTML com aparência.</li>
+        <li><strong>Foi substituída por CSS</strong>, que é muito mais flexível e moderno.</li>
+    </ul>
+
+    <h2>Exemplo de código usando &lt;font&gt; (NÃO recomendado)</h2>
+    <p>
+        Este é o código original, para fins didáticos:
+    </p>
+
+    <pre>
+&lt;font color="red" face="Trebuchet MS, Tahoma"&gt;
+    Este é um trecho do meu arquivo font
+&lt;/font&gt;
+    </pre>
+
+    <!-- Demonstração visual -->
+    <p>
+        <font color="red" face="Trebuchet MS, Tahoma">
+            Este é um trecho do meu arquivo font (exemplo antigo)
+        </font>
+    </p>
+
+    <h2>Como fazer da forma correta (usando CSS)</h2>
+
+    <p>
+        Hoje, o recomendado é usar <strong>CSS</strong>, seja em classes, IDs ou estilos inline.
+    </p>
+
+    <h3>Versão correta usando classe CSS</h3>
+
+<!-- Demonstração visual -->
+<p style="color: red; font-family: 'Trebuchet MS', Tahoma, sans-serif; font-size: 18px;">
+    Este é um texto formatado corretamente usando CSS inline.
+</p>
+
+    <h3>Versão correta usando style inline</h3>
+
+    <pre>
+&lt;p style="color: red; font-family: Trebuchet MS, Tahoma; font-size: 18px;"&gt;Texto estilizado com CSS 
+inline
+&lt;/p&gt;
+    </pre>
+
+
+    <p style="color: red; font-family: Trebuchet MS, Tahoma; font-size: 18px;">
+        Texto estilizado com CSS inline
+    </p>
+
+    <h2>Como seria no VS Code?</h2>
+    <p>
+        Basta criar um arquivo HTML normal e substituir qualquer uso de 
+        <strong>&lt;font&gt;</strong> por classes CSS, assim:
+    </p>
+
+    <pre>
+span.texto-formatado
+TAB
+    </pre>
+
+    <p>
+        Isso criará automaticamente um elemento com classe para você estilizar.
+    </p>
+
+    <!-- Pequena seção de referência -->
+    <h2>Referências</h2>
+    <p>Conteúdos usados como base:</p>
+
+    <ul>
+        <li>
+            Documentação da tag &lt;font&gt; — MDN </br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font" target="_blank">
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font
+            </a>
+        </li>
+        </br>
+
+        <li>
+            Boas práticas de CSS — MDN </br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps/How_CSS_is_structured
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldset e Legend</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .row {
+            margin: 5px 0;
+        }
+        label {
+            width: 120px;
+            text-align: right;
+            display: inline-block;
+            padding-right: 8px;
+        }
+        fieldset {
+            margin: 15px 0;
+            border-radius: 10px;
+            border: 2px solid blue;
+            padding: 15px;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Fieldset e Legend</h1>
+
+    <h2>O que é o &lt;fieldset&gt;?</h2>
+    <p>
+        A tag <strong>&lt;fieldset&gt;</strong> é usada para <strong>agrupar campos de um formulário</strong>, 
+        criando uma separação lógica e visual entre seções.
+        Isso deixa o formulário mais organizado e melhora a experiência do usuário.
+    </p>
+
+    <h3>Para que serve?</h3>
+    <ul>
+        <li>Organizar blocos de informações;</li>
+        <li>Apresentar seções distintas (Dados Pessoais, Endereço, etc.);</li>
+        <li>Ajudar na acessibilidade, pois leitores de tela entendem melhor o agrupamento;</li>
+        <li>Melhorar a aparência e a estrutura de um formulário.</li>
+    </ul>
+
+    <h2>O que é a tag &lt;legend&gt;?</h2>
+    <p>
+        A tag <strong>&lt;legend&gt;</strong> define um <strong>título para o grupo</strong> de campos 
+        criado pelo fieldset.  
+        Sem o legend, o agrupamento perde significado visual e semântico.
+    </p>
+
+    <h3>Exemplo visual de uso</h3>
+    <p>Abaixo está um formulário completo usando <strong>fieldset</strong> e <strong>legend</strong>, com preenchimento organizado:</p>
+
+    <!-- Formulário com fieldset (exemplo prático) -->
+    <form onsubmit="event.preventDefault(); alert('Formulário enviado com sucesso! (simulação)');" action="#" method="POST">
+        <div class="row">
+    
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+    
+                <div class="row">
+                    <label>Nome:</label>
+                    <input type="text" placeholder="Digite seu nome">
+    
+                    <label>E-mail:</label>
+                    <input type="email" placeholder="seuemail@exemplo.com">
+                </div>
+    
+                <div class="row">
+                    <label>Profissão:</label>
+                    <input type="text">
+    
+                    <label>Empresa:</label>
+                    <input type="text">
+                </div>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Endereço</legend>
+    
+                <div class="row">
+                    <label>Endereço:</label>
+                    <input type="text">
+    
+                    <label>Número:</label>
+                    <input type="number">
+                </div>
+    
+                <div class="row">
+                    <label>Bairro:</label>
+                    <input type="text">
+    
+                    <label>Cidade/UF:</label>
+                    <input type="text">
+                </div>
+            </fieldset>
+    
+            <fieldset>
+                <legend>Informações de Contato</legend>
+    
+                <div class="row">
+                    <label>Celular:</label>
+                    <input type="text">
+    
+                    <label>Whatsapp:</label>
+                    <input type="text">
+                </div>
+    
+                <div class="row">
+                    <label>LinkedIn:</label>
+                    <input type="url" placeholder="https://linkedin.com/...">
+    
+                    <label>GitHub:</label>
+                    <input type="url" placeholder="https://github.com/...">
+                </div>
+            </fieldset>
+    
+            <!-- BOTÕES FUNCIONANDO -->
+            <button type="reset">Limpar</button>
+            <button type="submit">Enviar formulário</button>
+        </div> 
+    </form>    
+
+    <br><br>
+
+    <h2>Atributos úteis do &lt;fieldset&gt;</h2>
+    <ul>
+        <li><strong>disabled</strong>: desativa todos os campos dentro do fieldset;</li>
+        <li><strong>form</strong>: associa o fieldset a um formulário específico;</li>
+        <li><strong>name</strong>: identifica o grupo.</li>
+    </ul>
+
+    <p>Exemplo:</p>
+
+    <fieldset disabled>
+        <legend>Somente leitura</legend>
+        <input type="text" placeholder="Desativado">
+    </fieldset>
+    <br>
+
+    <h2>Referências</h2>
+    <p>Conteúdos usados como base:</p>
+
+    <ul>
+        <li>
+            Documentação do &lt;fieldset&gt; (MDN)  
+            <br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/fieldset" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/fieldset
+            </a>
+        </li>
+        <br>
+
+        <li>
+            Documentação do &lt;legend&gt; (MDN)  
+            <br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/legend" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/legend
+            </a>
+        </li>
+        <br>
+
+        <li>
+            Guia de formulários HTML — MDN  
+            <br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Learn/Forms
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>

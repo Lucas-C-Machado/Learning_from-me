@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select e os seus Tipos</title>
+</head>
+<body>
+    <form>
+        <label>Nome: </label><input type="text" name="name" /> </br>
+        <label>Cargo: </label>
+        <select name="role">
+            <option value="" disabled>Selecione o cargo</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="almoxarifado">Almoxarifado</option>
+            <option value="cco">CCO</option>
+            <option value="projetista">Projetista</option>
+        </select> </br>
+        <label>Assunto: </label><input type="text" name="subject" /> </br>
+        <label>Mensagem: </label>
+        <textarea rows="10" cols="50" name="message"></textarea></br></br>
+    
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

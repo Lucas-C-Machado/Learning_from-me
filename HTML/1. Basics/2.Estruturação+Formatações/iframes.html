@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframes</title>
+</head>
+
+<body>
+
+    <h1>Iframes</h1>
+
+    <p>
+        A tag <strong>&lt;iframe&gt;</strong> permite incorporar conteúdo externo dentro da sua página.
+        Com ele, você pode exibir:
+    </p>
+
+    <ul>
+        <li>Sites completos</li>
+        <li>Vídeos do YouTube</li>
+        <li>Mapas do Google Maps</li>
+        <li>Documentos externos</li>
+        <li>Arquivos HTML criados por você</li>
+    </ul>
+
+    <p>
+        O &lt;iframe&gt; cria uma “janela” dentro do seu site onde outro conteúdo é carregado.
+        Alguns atributos importantes:
+    </p>
+
+    <ul>
+        <li><strong>src</strong> → endereço (URL) do conteúdo</li>
+        <li><strong>width</strong> → largura</li>
+        <li><strong>height</strong> → altura</li>
+        <li><strong>allowfullscreen</strong> → permite tela cheia para vídeos</li>
+    </ul>
+
+    <br>
+
+    <!-- ======================= -->
+    <!-- EXEMPLO 1: SITE EXTERNO -->
+    <!-- ======================= -->
+    <h2>Exemplo 1: Incorporando um site externo</h2>
+
+    <p>Este iframe carrega o site oficial da DIO:</p>
+
+    <iframe 
+        src="https://dio.me" 
+        width="500" 
+        height="400"
+        style="border: 1px solid #000; border-radius: 8px;">
+    </iframe>
+
+    <br><br>
+
+    <!-- ======================= -->
+    <!-- EXEMPLO 2: YOUTUBE -->
+    <!-- ======================= -->
+    <h2>Exemplo 2: Incorporando um vídeo do YouTube</h2>
+
+    <iframe 
+        width="500" 
+        height="300" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="Vídeo de exemplo"
+        allowfullscreen
+        style="border: 1px solid #000; border-radius: 8px;">
+    </iframe>
+
+    <br><br>
+
+    <!-- ======================= -->
+    <!-- EXEMPLO 3: GOOGLE MAPS -->
+    <!-- ======================= -->
+    <h2>Exemplo 3: Incorporando Google Maps</h2>
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.0509849640307!2d-43.209372!3d-22.903539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f62b2f3d0cd%3A0x4445adfbd7f9515!2sRio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1706800000000"
+        width="500"
+        height="300"
+        style="border: 1px solid #000; border-radius: 8px;">
+    </iframe>
+
+    <br><br>
+
+    <!-- ======================= -->
+    <!-- EXEMPLO 4: ARQUIVO LOCAL -->
+    <!-- ======================= -->
+    <h2>Exemplo 4: Incorporando um arquivo HTML criado por você</h2>
+
+    <p>
+        Você pode carregar um arquivo HTML local dentro de um iframe.  
+        É assim que programadores testam componentes isolados, páginas externas e telas auxiliares.  
+        Exemplo: carregar o arquivo <strong>pagina.html</strong> que está na mesma pasta.
+    </p>
+
+    <!-- Estrutura de diretórios para o aluno visualizar -->
+    <pre>
+projeto/
+├─ iframes.html      ← este arquivo
+└─ pagina.html       ← arquivo carregado pelo iframe
+    </pre>
+
+    <p><strong>Iframe carregando o arquivo pagina.html:</strong></p>
+
+    <!-- Iframe apontando para um arquivo local -->
+    <iframe
+        src="./pagina.html"
+        width="600"
+        height="300"
+        title="Página local carregada"
+        style="border: 1px solid #000; border-radius: 8px;">
+    </iframe>
+
+    <br><br>
+
+    <h3>Como eu fiz isso?</h3>
+
+    <p>O processo é simples:</p>
+
+    <ol>
+        <li>Criei um arquivo chamado <code>pagina.html</code> na mesma pasta.</li>
+        <li>No iframe, usei <code>src="./pagina.html"</code> para carregar este arquivo.</li>
+        <li>Mantive o width e height para controlar o tamanho da “janela”.</li>
+        <li>Usei CSS interno para deixar o iframe com borda estilizada.</li>
+    </ol>
+
+    <h3>IMPORTANTE — Por que às vezes o iframe local não abre?</h3>
+
+    <ul>
+        <li>
+            Quando você abre um arquivo pelo caminho 
+            <strong>file://</strong> (clicando duas vezes), o navegador bloqueia iframes locais por segurança.
+        </li>
+
+        <li>
+            Para evitar isso, você deve rodar seu projeto em um 
+            <strong>servidor local</strong>.
+        </li>
+    </ul>
+
+    <p><strong>Como abrir corretamente?</strong></p>
+
+    <ul>
+        <li>
+            ⛳ **VS Code + Live Server**  
+            Clique com o botão direito no arquivo → *Open with Live Server*
+        </li>
+
+        <li>
+            🐍 **Python (qualquer máquina)**  
+            Abra o terminal na pasta e rode:  
+            <pre>python -m http.server 8000</pre>  
+            Depois acesse: <code>http://localhost:8000/iframes.html</code>
+        </li>
+    </ul>
+
+    <br>
+
+    <!-- ======================= -->
+    <!-- REFERÊNCIAS -->
+    <!-- ======================= -->
+    <h2>Referências</h2>
+    <ul>
+        <li>
+            Documentação do &lt;iframe&gt; — MDN </br>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe" target="_blank">
+                https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            YouTube Embed Player — Documentação oficial </br>
+            <a href="https://developers.google.com/youtube/player_parameters" target="_blank">
+                https://developers.google.com/youtube/player_parameters
+            </a>
+        </li>
+
+        <br>
+
+        <li>
+            Google Maps Embed API </br>
+            <a href="https://developers.google.com/maps/documentation/embed" target="_blank">
+                https://developers.google.com/maps/documentation/embed
+            </a>
+        </li>
+    </ul>
+
+</body>
+</html>
