@@ -5,22 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Select e os seus Tipos</title>
 </head>
-<body>
-    <form>
-        <label>Nome: </label><input type="text" name="name" /> </br>
-        <label>Cargo: </label>
-        <select name="role">
-            <option value="" disabled>Selecione o cargo</option>
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;">
+
+    <h1 style="margin-bottom: 10px;">Select e os seus Tipos</h1>
+
+    <!--
+        Este documento demonstra:
+        ✔ Como utilizar o elemento <select>
+        ✔ Diferença entre opções normais e opção desabilitada
+        ✔ Input de texto + textarea + select
+        ✔ Boas práticas e comentários didáticos
+
+        Cada seção possui explicações claras para fins educacionais.
+    -->
+
+    <form style="padding: 15px; border: 2px solid #ccc; border-radius: 8px;">
+
+        <!-- CAMPO NOME -->
+        <label><strong>Nome:</strong></label><br>
+
+        <!--
+            Input simples de texto.
+            name="name" define a chave enviada ao servidor.
+        -->
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Digite seu nome"
+            style="width: 300px; padding: 6px; margin: 5px 0; border-radius: 5px; border: 1px solid #aaa;"
+        />
+        <br><br>
+
+
+        <!-- CAMPO SELECT (CARGO) -->
+        <label><strong>Cargo:</strong></label><br>
+
+        <!--
+            O elemento <select> cria uma lista suspensa.
+            A primeira opção está desabilitada para servir como placeholder.
+        -->
+        <select 
+            name="role"
+            style="width: 320px; padding: 6px; margin-top: 5px; border-radius: 5px; border: 1px solid #aaa;"
+        >
+            <option value="" disabled selected>Selecione o cargo</option>
             <option value="administrativo">Administrativo</option>
             <option value="almoxarifado">Almoxarifado</option>
             <option value="cco">CCO</option>
             <option value="projetista">Projetista</option>
-        </select> </br>
-        <label>Assunto: </label><input type="text" name="subject" /> </br>
-        <label>Mensagem: </label>
-        <textarea rows="10" cols="50" name="message"></textarea></br></br>
-    
-        <button type="submit">Enviar</button>
+        </select>
+        <br><br>
+
+
+        <!-- CAMPO ASSUNTO -->
+        <label><strong>Assunto:</strong></label><br>
+
+        <!--
+            Outro input simples.
+            Usado para identificar o tema da mensagem.
+        -->
+        <input 
+            type="text" 
+            name="subject"
+            placeholder="Digite o assunto"
+            style="width: 300px; padding: 6px; margin: 5px 0; border-radius: 5px; border: 1px solid #aaa;"
+        />
+        <br><br>
+
+
+        <!-- CAMPO TEXTO LONGO -->
+        <label><strong>Mensagem:</strong></label><br>
+
+        <!--
+            Textarea permite textos longos.
+            rows + cols controlam tamanho inicial.
+        -->
+        <textarea 
+            rows="10" 
+            cols="50" 
+            name="message"
+            placeholder="Digite sua mensagem aqui..."
+            style="padding: 10px; border-radius: 5px; border: 1px solid #aaa;"
+        ></textarea>
+        <br><br>
+
+
+        <!-- BOTÃO DE ENVIO -->
+        <button 
+            type="submit"
+            style="padding: 10px 25px; border: none; border-radius: 5px; background: #4CAF50; color: white; cursor: pointer;">
+            Enviar
+        </button>
+
     </form>
+
+
+    <!-- EXPLICAÇÕES FINAIS -->
+    <br><br>
+    <h2>Como este formulário funciona:</h2>
+
+    <ul>
+        <li>O campo <strong>Nome</strong> usa um input simples do tipo texto.</li>
+        <li>O <strong>Select</strong> permite selecionar apenas uma opção entre várias.</li>
+        <li>A primeira opção está <strong>disabled + selected</strong>, funcionando como placeholder.</li>
+        <li><strong>Textarea</strong> é usado para textos longos.</li>
+        <li>O botão <strong>Submit</strong> envia todos os dados via método padrão GET.</li>
+    </ul>
+
+    <h2>Casos de uso na prática:</h2>
+    <ul>
+        <li>Formulários de contato</li>
+        <li>Cadastro de funcionários</li>
+        <li>Seleção de perfis ou cargos</li>
+        <li>Solicitação de suporte</li>
+    </ul>
+
+    <!-- REFERÊNCIAS -->
+    <h2>Referências</h2>
+
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/select" target="_blank">
+                MDN – Elemento select
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/option" target="_blank">
+                MDN – Elemento option
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">
+                W3Schools – HTML Forms
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/tags/tag_select.asp" target="_blank">
+                W3Schools – Tag select
+            </a>
+        </li>
+        <li>
+            <a href="https://html.spec.whatwg.org/multipage/form-elements.html#the-select-element" target="_blank">
+                WHATWG Spec – Select Element
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>

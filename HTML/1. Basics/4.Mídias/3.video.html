@@ -1,15 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag <video></title>
+    <title>Tag video</title>
 </head>
-<body>
-    <video controls>
-        <source src="video3.mp4" />
-        <track src="legenda_video3.vtt" kind="captions" />
-        Seu navegador não tem suporte a vídeo
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background: #111; color: white;">
+
+    <h1 style="margin-bottom: 10px;">Exemplo de Uso da Tag &lt;video&gt; com Legendas</h1>
+
+    <!-- ================================================================
+         SOBRE ESTE ARQUIVO
+         ----------------------------------------------------------------
+         Este documento demonstra:
+         ✔ uso da tag <video>
+         ✔ aplicação de legendas externas (.vtt)
+         ✔ múltiplos formatos com <source>
+         ✔ acessibilidade via <track>
+         ✔ fallback para navegadores antigos
+         ✔ explicação do processo REAL utilizado para gerar as legendas
+       ================================================================ -->
+
+    <h2>Player de Vídeo com Legendas</h2>
+
+    <!-- ================================================================
+                         V Í D E O   P R I N C I P A L
+         ================================================================
+
+         Atributos úteis:
+         controls    = Exibe botões do player (play, pause, volume)
+         width       = Define o tamanho do vídeo
+         poster      = Miniatura exibida antes do vídeo carregar
+         loop        = Repete automaticamente
+         muted       = Começa sem áudio
+         autoplay    = Inicia automaticamente (geralmente bloqueado)
+
+         OBS: As legendas no formato .vtt seguem um padrão do W3C.
+    -->
+
+    <video controls width="600" poster="thumb_video.png"
+        style="border-radius: 10px; border: 2px solid #333; background: black;">
+
+        <!-- FONTE PRINCIPAL -->
+        <source src="tag_video.mp4" type="video/mp4">
+
+        <!-- FORMATOS EXTRAS (caso queira oferecer compatibilidade ampliada) -->
+        <!--
+        <source src="video3.webm" type="video/webm">
+        <source src="video3.ogg" type="video/ogg">
+        -->
+
+        <!-- ================================================================
+                               L E G E N D A S  (.VTT)
+             ================================================================
+             kind="captions" → recomendado para acessibilidade
+             srclang="pt-br" → define o idioma da legenda
+             default         → deixa ativo automaticamente
+         -->
+        <track src="legenda_video.vtt" kind="captions" srclang="pt-br" label="Português" default>
+
+        <!-- FALLBACK (aparece apenas em navegadores muito antigos) -->
+        Seu navegador não tem suporte para reprodução de vídeo.
     </video>
+
+    <br><br>
+
+    <!-- ================================================================
+                         E X P L I C A Ç Õ E S   D O   V Í D E O
+         ================================================================ -->
+    <h2>Como funciona este vídeo:</h2>
+
+    <ul>
+        <li><strong>controls:</strong> exibe os botões padrão do player.</li>
+        <li><strong>source:</strong> permite fornecer o vídeo em vários formatos.</li>
+        <li><strong>track:</strong> adiciona legendas acessíveis (.vtt).</li>
+        <li>O navegador escolhe automaticamente o formato compatível.</li>
+        <li><strong>poster:</strong> carrega uma miniatura antes da reprodução.</li>
+        <li><strong>Fallback:</strong> mensagem caso o navegador seja muito antigo.</li>
+    </ul>
+
+    <br>
+
+    <!-- ================================================================
+           E X P L I C A Ç Ã O   D O   P R O C E S S O   D E   L E G E N D A S
+         ================================================================ -->
+    <h2>Como eu gerei as legendas deste vídeo:</h2>
+
+    <!--
+        Este bloco documenta exatamente o processo utilizado pelo aluno para criar as legendas.
+    -->
+    <p>
+        Para produzir o arquivo de legendas <strong>.vtt</strong> deste vídeo, segui exatamente os passos abaixo:
+    </p>
+
+    <ol>
+        <li>
+            <strong>Enviei o vídeo para um software de transcrição automática</strong>,
+            que converteu o áudio completo para texto no formato <strong>.txt</strong>.
+            <br>
+            Ferramenta usada:
+            <a href="https://www.cockatoo.com/transcript/AuPJqeF0Msa9NPhfLh6dYlqgabLURLgsWeFaDQZQyOiq0lZRvL"
+                target="_blank" style="color: #4FC3F7;">
+                Cockatoo – Transcrição Automática
+            </a>
+        </li>
+
+        <li>
+            <strong>Copiei o texto transcrito e trouxe para o ChatGPT</strong>, pedindo para:
+            <ul>
+                <li>converter o texto em um arquivo <strong>.vtt</strong> sincronizado;</li>
+                <li>formatar no padrão WebVTT oficial.</li>
+            </ul>
+        </li>
+
+        <li>
+            Existem softwares pagos com legenda automática sincronizada perfeitamente (como Whisper Pro, ASC,
+            Descript, Premiere Auto-Captions etc.), mas como o objetivo aqui é didático
+            — aprender como funciona a estrutura e aplicar em HTML —
+            <strong>não houve necessidade de nenhuma ferramenta paga</strong>.
+        </li>
+
+        <li>
+            Após gerar o arquivo final, salvei como:
+            <br>
+            <code style="color: #4FC3F7;">legenda_video.vtt</code>
+        </li>
+
+        <li>
+            Por fim, <strong>adicionei o arquivo .vtt ao meu projeto</strong> e utilizei a tag
+            <code>&lt;track&gt;</code> dentro do elemento
+            <code>&lt;video&gt;</code> para ativar as legendas no navegador.
+        </li>
+    </ol>
+
+    <br>
+
+    <!-- ================================================================
+                      C A S O S   D E   U S O
+         ================================================================ -->
+    <h2>Casos de uso</h2>
+
+    <ul>
+        <li>Vídeos educacionais com acessibilidade.</li>
+        <li>Páginas de treinamento corporativo.</li>
+        <li>Vídeos institucionais.</li>
+        <li>Apresentações de sistemas web.</li>
+    </ul>
+
+    <br>
+
+    <!-- ================================================================
+                               R E F E R Ê N C I A S
+         ================================================================ -->
+    <h2>Referências</h2>
+
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/video"
+                target="_blank" style="color: #4FC3F7;">
+                MDN – Elemento &lt;video&gt;
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/html/html5_video.asp"
+                target="_blank" style="color: #4FC3F7;">
+                W3Schools – HTML Video
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/track"
+                target="_blank" style="color: #4FC3F7;">
+                MDN – Elemento &lt;track&gt; (legendas)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3.org/TR/webvtt1/"
+                target="_blank" style="color: #4FC3F7;">
+                W3C – WebVTT (Formato Oficial)
+            </a>
+        </li>
+    </ul>
+
 </body>
+
 </html>

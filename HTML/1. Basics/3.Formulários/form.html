@@ -5,13 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
 </head>
-<body>
-    <form name="signup" autocomplete="on" method="POST" action="#">
-        Nome: <input type="text" name="name" /></br>
-        Idade: <input type="number" name="age" /></br>
-        Senha: <input type="password" name="password" /></br>
-        <button type="submit">Enviar</button>
+
+<body style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
+
+    <h1 style="margin-bottom: 10px;">Formulário de Cadastro</h1>
+
+    <!--
+        Este formulário demonstra:
+        ✔ autocomplete
+        ✔ método POST
+        ✔ campos básicos (texto, número, senha)
+        ✔ botão de envio
+        ✔ boas práticas com <label> e acessibilidade
+    -->
+
+    <form 
+        name="signup" 
+        autocomplete="on" 
+        method="POST" 
+        action="#"
+        style="border: 2px solid #ccc; padding: 20px; border-radius: 10px; max-width: 400px;"
+    >
+
+        <label for="name"><strong>Nome:</strong></label><br>
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            required
+            placeholder="Digite seu nome completo"
+            style="width: 100%; padding: 6px; margin: 5px 0 15px;"
+        >
+
+        <label for="age"><strong>Idade:</strong></label><br>
+        <input 
+            type="number" 
+            id="age" 
+            name="age" 
+            min="0"
+            max="120"
+            placeholder="Ex: 25"
+            required
+            style="width: 100%; padding: 6px; margin: 5px 0 15px;"
+        >
+
+        <label for="password"><strong>Senha:</strong></label><br>
+        <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            minlength="6"
+            placeholder="Mínimo 6 caracteres"
+            required
+            style="width: 100%; padding: 6px; margin: 5px 0 20px;"
+        >
+
+        <button 
+            type="submit"
+            style="padding: 10px 20px; background: #4CAF50; color: white; border: none; border-radius: 6px; cursor: pointer; width: 100%;"
+        >
+            Enviar
+        </button>
+
     </form>
-    
+
+    <br>
+    <h2>Como este formulário funciona:</h2>
+
+    <ul>
+        <li><strong>autocomplete="on"</strong> → navegador sugere informações salvas.</li>
+        <li><strong>method="POST"</strong> → dados não aparecem na URL.</li>
+        <li><strong>action="#"</strong> → formulário apenas demonstrativo.</li>
+        <li><strong>label + for</strong> → melhor acessibilidade.</li>
+        <li><strong>required</strong> → campos obrigatórios.</li>
+        <li><strong>placeholder</strong> → auxilia no preenchimento.</li>
+        <li><strong>min, max, minlength</strong> → validações integradas.</li>
+    </ul>
+    </br>
+
+    <h2>Quando usar este tipo de formulário?</h2>
+    <ul>
+        <li>Cadastro simples de usuários.</li>
+        <li>Coleta de informações básicas.</li>
+        <li>Páginas de login (com ajustes).</li>
+        <li>Exemplos para ensino de HTML.</li>
+    </ul>
+
+    <!-- ============================
+         REFERÊNCIAS COM LINKS CLICÁVEIS
+    ============================ -->
+    <br>
+    <h2>Referências</h2>
+
+    <ul>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/Your_first_form" target="_blank">
+                MDN – Seu primeiro formulário HTML
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form" target="_blank">
+                Elemento &lt;form&gt; – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods/POST" target="_blank">
+                Atributo method (GET / POST) – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input" target="_blank">
+                Elemento &lt;input&gt; – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input#input_types" target="_blank">
+                Tipos de input – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/required" target="_blank">
+                Atributo required – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/placeholder" target="_blank">
+                Atributo placeholder – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/minlength" target="_blank">
+                Atributo minlength – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/min" target="_blank">
+                Atributo min e max – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/label" target="_blank">
+                Elemento &lt;label&gt; – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete" target="_blank">
+                Atributo autocomplete – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Learn/Forms/How_to_structure_a_web_form" target="_blank">
+                Como estruturar formulários – MDN
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank">
+                Acessibilidade - MDN 
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">
+                W3Schools – Guia de Formulários HTML
+            </a>
+        </li>
+
+    </ul>
+
 </body>
 </html>

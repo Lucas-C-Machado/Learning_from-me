@@ -3,13 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag <img></title>
+    <title>Tag img</title>
 </head>
-<body style="background-color: black;" >
-    <img style="color: white;" title="Logotipo" alt="Descrição da logo da DIO" src="pexels.jpg" width="450" /> </br>
-    <img src="qpexels.png" width="450" />
-    <svg>
 
+<body style="background-color: #000; color: white; font-family: Arial, sans-serif; padding: 20px;">
+
+    <h1 style="margin-bottom: 10px;">Exemplos de Uso da Tag IMG</h1>
+
+    <!--
+        Este documento demonstra:
+        ✔ Como exibir imagens usando <img>
+        ✔ Uso correto de alt, title e width
+        ✔ Boas práticas de acessibilidade
+        ✔ Diferença entre imagens bitmap e vetoriais
+        ✔ Inclusão de SVG no documento
+    -->
+
+    <!-- PRIMEIRA IMAGEM -->
+    <h2>Imagem 1: Logotipo (Exemplo JPG)</h2>
+
+    <!--
+        Atributos importantes:
+        alt   → texto alternativo (acessibilidade e SEO)
+        title → aparece ao passar o mouse
+        width → controla o tamanho sem distorcer
+    -->
+    <img 
+        src="pexels.jpg" 
+        alt="Imagem ilustrativa do site Pexels mostrando um tema visual" 
+        title="Imagem carregada a partir do arquivo pexels.jpg"
+        width="450"
+        style="border-radius: 6px; margin-bottom: 20px;"
+    />
+
+
+    <!-- SEGUNDA IMAGEM -->
+    <h2>Imagem 2: Outro Exemplo (PNG)</h2>
+
+    <!--
+        PNG é ideal para imagens com transparência.
+    -->
+    <img 
+        src="qpexels.png" 
+        alt="Imagem no formato PNG carregada do arquivo qpexels.png"
+        width="450"
+        style="border-radius: 6px; margin-bottom: 20px;"
+    />
+
+
+    <!-- SEÇÃO SVG -->
+    <h2>Exemplo de SVG no HTML</h2>
+
+    <!--
+        SVG = imagem vetorial, escalável sem perder qualidade.
+        Pode ser usada para ícones, gráficos e logotipos.
+    -->
+    <svg 
+        width="200" 
+        height="200" 
+        style="background: #222; padding: 10px; border-radius: 8px;"
+    >
+        <!-- Círculo demonstrativo -->
+        <circle cx="100" cy="100" r="80" stroke="white" stroke-width="4" fill="none" />
+
+        <!-- Texto dentro do SVG -->
+        <text x="50" y="110" fill="white" font-size="20">SVG Demo</text>
     </svg>
+
+
+    <!-- EXPLICAÇÕES FINAIS -->
+    <br><br>
+    <h2>Como este documento funciona:</h2>
+
+    <ul>
+        <li><strong>&lt;img&gt;</strong> é uma tag auto-fechante usada para exibir imagens.</li>
+        <li><strong>alt</strong> descreve a imagem caso ela não carregue (essencial para acessibilidade).</li>
+        <li><strong>title</strong> exibe uma dica ao passar o mouse.</li>
+        <li><strong>width</strong> redimensiona mantendo a proporção.</li>
+        <li><strong>SVG</strong> permite criar imagens vetoriais dentro do próprio HTML.</li>
+    </ul>
+
+    <!-- REFERÊNCIAS -->
+    <h2>Referências</h2>
+
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/img" target="_blank" style="color: #4FC3F7;">
+                MDN – Elemento &lt;img&gt;
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/SVG" target="_blank" style="color: #4FC3F7;">
+                MDN – Guia de SVG
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" style="color: #4FC3F7;">
+                W3Schools – HTML Images
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/graphics/svg_intro.asp" target="_blank" style="color: #4FC3F7;">
+                W3Schools – SVG Introduction
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>

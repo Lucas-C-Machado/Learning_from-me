@@ -3,10 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag <iframe></title>
+    <title>Tag iframe</title>
 </head>
-<body>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KOw2ZTtysns?si=G1MQ3Kel6VIo8l1_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262900.6885960053!2d-53.98945760852951!3d-29.77715706235378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cb5d0da567bf%3A0xa44d9c1e7f7f7297!2sSanta%20Maria%20-%20RS!5e1!3m2!1spt-BR!2sbr!4v1764203588239!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background: #111; color: white;">
+
+    <h1 style="margin-bottom: 10px;">Exemplo de Uso da Tag &lt;iframe&gt;</h1>
+
+    <h2>O que este arquivo demonstra?</h2>
+    <p>
+        Este documento ensina de forma prática como funciona a tag <strong>&lt;iframe&gt;</strong>, incluindo:
+    </p>
+    <ul>
+        <li>Como incorporar vídeos externos via iframe</li>
+        <li>Como incorporar mapas (Google Maps)</li>
+        <li>Atributos importantes de segurança</li>
+        <li>Como o iframe funciona e seus casos de uso</li>
+        <li>Estrutura organizada para aprendizado didático</li>
+    </ul>
+
+    <h2>O que é um &lt;iframe&gt;?</h2>
+    <p>
+        O elemento <strong>&lt;iframe&gt;</strong> permite carregar uma página HTML externa 
+        <strong>dentro da sua própria página</strong>.  
+        Em outras palavras, ele cria uma “janela” que exibe outro conteúdo.
+    </p>
+
+    <p>Alguns usos comuns incluem:</p>
+    <ul>
+        <li>Vídeos do YouTube</li>
+        <li>Mapas como Google Maps</li>
+        <li>Formulários do Google Forms</li>
+        <li>Widgets externos</li>
+        <li>Documentos incorporados de outras plataformas</li>
+    </ul>
+
+    <p>
+        <strong>Segurança:</strong><br>
+        O iframe possui atributos que ajudam a controlar permissões, privacidade e o que 
+        o conteúdo incorporado pode ou não fazer, como <strong>allow</strong>, 
+        <strong>referrerpolicy</strong> e <strong>loading</strong>.
+    </p>
+
+    <br>
+
+    <!-- ================================
+         Y O U T U B E   E M B E D
+       ================================ -->
+    <h2>Exemplo 1 — Incorporando um vídeo do YouTube</h2>
+
+    <p>
+        Aqui incluímos um vídeo externo usando a URL de embed fornecida pelo próprio YouTube.  
+        Os atributos mais importantes são:
+    </p>
+
+    <ul>
+        <li><strong>width / height</strong> — define o tamanho do vídeo</li>
+        <li><strong>src</strong> — URL do vídeo incorporado</li>
+        <li><strong>frameborder</strong> — remove bordas</li>
+        <li><strong>allow</strong> — libera permissões (autoplay, clipboard, etc.)</li>
+        <li><strong>allowfullscreen</strong> — habilita modo tela cheia</li>
+        <li><strong>referrerpolicy</strong> — controla informações enviadas ao site</li>
+    </ul>
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/aRGdDy18qfY"
+        title="Player de vídeo YouTube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        style="border-radius: 10px; margin-bottom: 30px;"
+    ></iframe>
+
+    <br><br>
+
+    <!-- ================================
+             G O O G L E   M A P S
+       ================================ -->
+    <h2>Exemplo 2 — Incorporando um mapa do Google Maps</h2>
+
+    <p>
+        O Google Maps fornece um código pronto para incorporar mapas.  
+        Este iframe contém várias informações:
+    </p>
+
+    <ul>
+        <li><strong>Coordenadas da cidade</strong></li>
+        <li><strong>Zoom e ajuste da câmera</strong></li>
+        <li><strong>loading="lazy"</strong> — carrega somente quando necessário</li>
+        <li><strong>allowfullscreen</strong> — permite tela cheia</li>
+        <li><strong>referrerpolicy</strong> — protege dados do usuário</li>
+    </ul>
+
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d262900.6885960053!2d-53.98945760852951!3d-29.77715706235378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9503cb5d0da567bf%3A0xa44d9c1e7f7f7297!2sSanta%20Maria%20-%20RS!5e1!3m2!1spt-BR!2sbr!4v1764203588239!5m2!1spt-BR!2sbr" 
+        width="500" 
+        height="300" 
+        style="border:0; border-radius: 10px;"
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+
+    <br><br>
+
+    <!-- ================================
+              E X P L I C A Ç Õ E S
+       ================================ -->
+    <h2>Como funciona tecnicamente o &lt;iframe&gt;?</h2>
+    <ul>
+        <li><strong>&lt;iframe&gt;</strong> carrega outra página dentro da atual.</li>
+        <li><strong>src</strong> contém o link do conteúdo incorporado.</li>
+        <li><strong>allow</strong> controla recursos liberados ao conteúdo.</li>
+        <li><strong>loading="lazy"</strong> melhora o desempenho.</li>
+        <li><strong>referrerpolicy</strong> controla os dados enviados.</li>
+        <li><strong>allowfullscreen</strong> ativa o modo tela cheia.</li>
+    </ul>
+
+    <h2>Casos de uso reais:</h2>
+    <ul>
+        <li>Vídeos incorporados (YouTube, Vimeo)</li>
+        <li>Mapas interativos</li>
+        <li>Formulários externos</li>
+        <li>Dashboards e gráficos via ferramentas externas</li>
+        <li>PDFs e documentos</li>
+    </ul>
+
+    <br>
+
+    <!-- ==========================
+            REFERÊNCIAS
+       ========================== -->
+    <h2>Referências</h2>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe"
+                target="_blank" style="color: #4FC3F7;">
+                MDN – Elemento &lt;iframe&gt;
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/tags/tag_iframe.asp"
+                target="_blank" style="color: #4FC3F7;">
+                W3Schools – HTML iframe
+            </a>
+        </li>
+        <li>
+            <a href="https://developers.google.com/youtube/player_parameters"
+                target="_blank" style="color: #4FC3F7;">
+                YouTube API – Embed Player
+            </a>
+        </li>
+        <li>
+            <a href="https://developers.google.com/maps/documentation/embed/embedding-map"
+                target="_blank" style="color: #4FC3F7;">
+                Google Maps – Embed API
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>

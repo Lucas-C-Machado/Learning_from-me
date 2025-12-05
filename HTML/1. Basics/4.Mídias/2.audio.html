@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag <audio></title>
+    <title>Tag audio</title>
 </head>
-<body>
-    <audio controls> <!--Aparece os controles do navegador (é padrão)-->
-        <souce src="gaplausos.mp3" />
-        <!--Esta é uma retrocompatibilidade, ou seja, quando o seu navegador
-        NÃO SUPORTA este tipo de áudio-->
-        Seu navegador não tem suporte para este áudio
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background: #111; color: white;">
+
+    <h1 style="margin-bottom: 10px;">Exemplo de Uso da Tag &lt;audio&gt;</h1>
+
+    <!--
+        Este documento demonstra:
+        ✔ Como usar a tag <audio>
+        ✔ Como habilitar controles do navegador
+        ✔ Retrocompatibilidade usando fallback
+        ✔ Uso correto de <source>
+        ✔ Formatos recomendados (mp3, ogg, wav)
+    -->
+
+    <h2>Audio Player com Controles</h2>
+
+    <!-- PLAYER DE ÁUDIO -->
+    <!--
+        Atributos do audio:
+        controls → exibe play/pause, barra de progresso, volume etc.
+        autoplay → inicia automaticamente (não recomendado)
+        loop     → repete continuamente
+        muted    → começa sem som
+
+        É recomendado usar múltiplas <source> com formatos diferentes,
+        pois nem todos os navegadores suportam todos os tipos.
+    -->
+    <audio controls style="width: 100%; max-width: 500px; margin-bottom: 20px;">
+
+        <!-- CORREÇÃO: "source" estava escrito errado -->
+        <source src="gaplausos.mp3" type="audio/mpeg">
+
+        <!-- EXEMPLOS ADICIONAIS (opcionais)
+        <source src="gaplausos.ogg" type="audio/ogg">
+        <source src="gaplausos.wav" type="audio/wav">
+        -->
+
+        <!-- Fallback (aparece caso o navegador não suporte a tag) -->
+        Seu navegador não tem suporte para reprodução de áudio.
     </audio>
+
+
+    <br><br>
+    <!-- EXPLICAÇÕES FINAIS -->
+    <h2>Como este áudio funciona:</h2>
+
+    <ul>
+        <li>A tag <strong>&lt;audio&gt;</strong> permite reproduzir sons diretamente no navegador.</li>
+        <li>O atributo <strong>controls</strong> exibe o player para o usuário.</li>
+        <li>As tags <strong>&lt;source&gt;</strong> permitem especificar diferentes formatos.</li>
+        <li>O texto interno é exibido como fallback de compatibilidade.</li>
+        <li>Formatos mais usados: <strong>MP3</strong>, <strong>OGG</strong>, <strong>WAV</strong>.</li>
+    </ul>
+
+    <h2>Casos de uso:</h2>
+    <ul>
+        <li>Áudio de fundo para páginas educativas.</li>
+        <li>Reprodução de podcasts.</li>
+        <li>Efeitos sonoros em sistemas.</li>
+        <li>Material didático e treinamentos.</li>
+    </ul>
+
+
+    <!-- REFERÊNCIAS -->
+    <h2>Referências</h2>
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/audio" 
+               target="_blank" style="color: #4FC3F7;">
+                MDN – Elemento &lt;audio&gt;
+            </a>
+        </li>
+        <li>
+            <a href="https://www.w3schools.com/html/html5_audio.asp" 
+               target="_blank" style="color: #4FC3F7;">
+                W3Schools – HTML Audio
+            </a>
+        </li>
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Audio_codecs" 
+               target="_blank" style="color: #4FC3F7;">
+                MDN – Formatos e Codecs de Áudio
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>

@@ -1,0 +1,198 @@
+WEBVTT
+
+00:00:05.000 --> 00:00:09.000
+Neste vídeo vamos falar sobre a tag <video> do HTML5.
+
+00:00:09.000 --> 00:00:14.000
+Como você pode ver, a tag vídeo precisa abrir e também fechar.
+Ela contém conteúdo interno e permite outras tags dentro dela.
+
+00:00:14.000 --> 00:00:19.000
+A tag vídeo serve para inserir um vídeo no documento HTML.
+Pode ser um vídeo simples, um trailer, um filme
+ou até uma transmissão ao vivo.
+
+00:00:19.000 --> 00:00:25.000
+Podemos receber uma URL de um servidor de streaming
+e exibir uma chamada de vídeo ou evento ao vivo.
+
+00:00:25.000 --> 00:00:31.000
+Os formatos suportados atualmente pelos navegadores são:
+MP4, WebM e OGG.
+
+00:00:31.000 --> 00:00:36.000
+Qualquer conteúdo de HTML dentro da tag vídeo
+será exibido caso o navegador não dê suporte
+ou o usuário tenha desabilitado o player.
+
+00:00:36.000 --> 00:00:42.000
+A tag vídeo possui todos os atributos globais do HTML5
+e também atributos específicos, como a tag áudio.
+
+00:00:42.000 --> 00:00:47.000
+Entre eles temos:
+autoplay, para iniciar automaticamente;
+
+00:00:47.000 --> 00:00:51.500
+controls, que habilita play, pause, volume e etc;
+
+00:00:51.500 --> 00:00:55.000
+height, para definir a altura;
+
+00:00:55.000 --> 00:00:58.500
+loop, para repetir assim que chegar ao final;
+
+00:00:58.500 --> 00:01:02.000
+muted, que remove o som do vídeo;
+
+00:01:02.000 --> 00:01:06.000
+poster, que mostra uma imagem antes do vídeo tocar
+ou enquanto carrega;
+
+00:01:06.000 --> 00:01:11.000
+preload, que força o carregamento antecipado do vídeo;
+
+00:01:11.000 --> 00:01:15.000
+src, que define a URL do arquivo;
+
+00:01:15.000 --> 00:01:19.000
+e width, que define a largura.
+
+00:01:19.000 --> 00:01:25.000
+Falando do CSS padrão: a tag vídeo não possui nenhum.
+O navegador apenas exibe um retângulo padrão do player.
+
+00:01:25.000 --> 00:01:30.000
+Vamos ver um exemplo na prática.
+Vou criar um arquivo chamado video.html.
+
+00:01:30.000 --> 00:01:34.000
+Crio a estrutura padrão do HTML5
+e coloco o título “tag vídeo”.
+
+00:01:34.000 --> 00:01:39.000
+Dentro do body abrimos e fechamos a tag vídeo.
+O VS Code já sugere o atributo src.
+
+00:01:39.000 --> 00:01:43.000
+Aqui, escolho um arquivo na pasta vídeos,
+um trailer chamado av1-trailer.mp4.
+
+00:01:43.000 --> 00:01:47.000
+Se quiser usar o mesmo vídeo, o link está na descrição
+ou nos recursos da aula.
+
+00:01:47.000 --> 00:01:50.000
+Salvamos o arquivo e abrimos no navegador.
+
+00:01:50.000 --> 00:01:55.000
+Veja que o vídeo aparece gigantesco,
+porque ele usa a resolução original do arquivo.
+
+00:01:55.000 --> 00:02:00.000
+E repare que não temos nenhum controle:
+não dá para dar play.
+
+00:02:00.000 --> 00:02:04.000
+No console, vemos que o navegador já carregou
+metadados e parte do vídeo.
+
+00:02:04.000 --> 00:02:08.000
+Ou seja, ele já sabe o tamanho e começa o buffer inicial.
+
+00:02:08.000 --> 00:02:12.000
+Vamos ativar os controles e ajustar a largura.
+
+00:02:12.000 --> 00:02:17.000
+Voltamos ao HTML e colocamos width="600".
+O navegador calcula a altura automaticamente.
+
+00:02:17.000 --> 00:02:21.000
+Também adicionamos controls.
+
+00:02:21.000 --> 00:02:25.000
+Atualizando a página,
+o vídeo agora tem 600px de largura
+e controles habilitados.
+
+00:02:25.000 --> 00:02:30.000
+Podemos ver a duração: 1 minuto e 1 segundo.
+Temos play, volume, fullscreen e menu.
+
+00:02:30.000 --> 00:02:35.000
+O fullscreen nativo ocupa apenas a área do navegador,
+não a tela inteira do sistema.
+
+00:02:35.000 --> 00:02:40.000
+Nesse menu também apareceriam legendas,
+caso o vídeo tivesse um arquivo .vtt vinculado.
+
+00:02:40.000 --> 00:02:45.000
+A barra de navegação mostra o carregamento do buffer,
+com as requisições do vídeo.
+
+00:02:45.000 --> 00:02:49.000
+Quando apertamos play, o vídeo é reproduzido normalmente.
+
+00:02:49.000 --> 00:02:53.000
+“The world has changed.”
+
+00:02:53.000 --> 00:02:58.000
+Enquanto o vídeo toca, o navegador carrega mais partes
+do arquivo para manter a reprodução contínua.
+
+00:02:58.000 --> 00:03:03.000
+Sobre autoplay:
+o Chrome atual não permite autoplay com som,
+
+00:03:03.000 --> 00:03:07.000
+a não ser que o usuário já tenha interagido com a página
+ou com o player.
+
+00:03:07.000 --> 00:03:12.000
+Isso evita sites que tocavam vídeos automaticamente,
+gastando banda e irritando o usuário.
+
+00:03:12.000 --> 00:03:17.000
+Outro atributo é loop.
+Quando o vídeo chegar ao final, ele reinicia.
+
+00:03:17.000 --> 00:03:21.000
+Vamos testar: avanço até o final…
+
+00:03:21.000 --> 00:03:24.000
+E pronto: voltou para o começo.
+
+00:03:24.000 --> 00:03:29.000
+O atributo muted deixa o vídeo sem som.
+O player exibe o ícone de volume riscado.
+
+00:03:29.000 --> 00:03:34.000
+O preload força o navegador a carregar dados
+antes do usuário dar play.
+
+00:03:34.000 --> 00:03:38.000
+O atributo poster exibe uma imagem de capa
+antes do vídeo iniciar.
+
+00:03:38.000 --> 00:03:43.000
+Vou colocar uma imagem da pasta de imagens,
+que também está nos recursos da aula.
+
+00:03:43.000 --> 00:03:47.000
+Atualizando a página,
+o poster aparece durante o carregamento.
+
+00:03:47.000 --> 00:03:52.000
+Como o arquivo é local, o carregamento é rápido,
+então o poster aparece por pouco tempo.
+
+00:03:52.000 --> 00:03:57.000
+Neste vídeo, vimos a tag vídeo do HTML5
+e como reproduzir vídeos nativos no navegador.
+
+00:03:57.000 --> 00:04:01.000
+Na próxima aula continuamos falando sobre HTML5.
+
+00:04:01.000 --> 00:04:04.000
+Até lá!

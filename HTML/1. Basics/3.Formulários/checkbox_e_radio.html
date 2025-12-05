@@ -3,28 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chackbox e Radio</title>
+    <title>Checkbox e Radio</title>
 </head>
-<body>
-    <form method="GET">
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 20px;">
+
+    <h1 style="margin-bottom: 10px;">Checkbox e Radio</h1>
+
+    <!--
+        Este formulário demonstra como usar:
+        ✔ CHECKBOX (múltipla escolha)
+        ✔ RADIO (apenas uma escolha por grupo)
+    -->
+
+    <form method="GET" style="padding: 15px; border: 2px solid #ccc; border-radius: 8px;">
+
+        <!-- SEÇÃO 1 — CHECKBOX -->
         <h3>Você selecionou: Pizza de Calabresa</h3>
-        <p>Quais opcionais você deseja?</p>
-        <input type="checkbox" name="opcional[]" value="queijo" disabled />+ queijo (indisponível)</br>
-        <input type="checkbox" name="opcional[]" value="calabresa" />+ calabresa </br>
-        <input type="checkbox" name="opcional[]" value="cebola" />+ cebola </br>
-        <input type="checkbox" name="opcional[]" value="azeitona" />+ azeitona </br></br>
 
+        <p>Quais opcionais você deseja adicionar?</p>
+
+        <label>
+            <input type="checkbox" name="opcional[]" value="queijo" disabled />
+            + queijo (indisponível)
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="opcional[]" value="calabresa" />
+            + calabresa
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="opcional[]" value="cebola" />
+            + cebola
+        </label><br>
+
+        <label>
+            <input type="checkbox" name="opcional[]" value="azeitona" />
+            + azeitona
+        </label><br><br>
+
+
+        <!-- SEÇÃO 2 — RADIO (SIM / NÃO) -->
         <p>Borda recheada</p>
-        <input type="radio" name="borda" value="sim" />Sim
-        <input type="radio" name="borda" value="nao" />Não </br></br>
 
+        <label>
+            <input type="radio" name="borda" value="sim" />
+            Sim
+        </label>
+
+        <label style="margin-left: 15px;">
+            <input type="radio" name="borda" value="nao" />
+            Não
+        </label><br><br>
+
+
+        <!-- SEÇÃO 3 — RADIO (BEBIDA) -->
         <p>Bebida</p>
-        <input type="radio" name="bebida" value="suco" />Suco </br>
-        <input type="radio" name="bebida" value="refrigerante" />Refrigerante </br>
-        <input type="radio" name="bebida" value="agua" />Água </br>
-        <input type="radio" name="bebida" value="nenhum" />Nenhum </br></br>
 
-        <button>Enviar pedido</button>
+        <label>
+            <input type="radio" name="bebida" value="suco" />
+            Suco
+        </label><br>
+
+        <label>
+            <input type="radio" name="bebida" value="refrigerante" />
+            Refrigerante
+        </label><br>
+
+        <label>
+            <input type="radio" name="bebida" value="agua" />
+            Água
+        </label><br>
+
+        <label>
+            <input type="radio" name="bebida" value="nenhum" />
+            Nenhum
+        </label><br><br>
+
+
+        <!-- BOTÃO DE ENVIO -->
+        <button 
+            type="submit"
+            style="padding: 8px 20px; border: none; border-radius: 5px; background: #4CAF50; color: white; cursor: pointer;">
+            Enviar pedido
+        </button>
+
     </form>
+
+    <!-- EXPLICAÇÃO FINAL -->
+    <br><br>
+    <h2>Como este formulário funciona:</h2>
+
+    <ul>
+        <li><strong>Checkbox</strong> permite escolher várias opções ao mesmo tempo.</li>
+        <li>O atributo <strong>name="opcional[]"</strong> envia todas as escolhas dentro de um array.</li>
+        <li><strong>disabled</strong> bloqueia a interação (ótimo para itens indisponíveis).</li>
+        <li><strong>Radio</strong> permite escolher apenas UMA opção dentro do mesmo grupo (mesmo name).</li>
+        <li>O botão "<strong>Submit</strong>" envia tudo via método GET, aparecendo na URL.</li>
+    </ul>
+
+    <h2>Casos de uso:</h2>
+    <ul>
+        <li>Checkbox → opcionais de pizza, preferências extras, múltiplas seleções.</li>
+        <li>Radio → escolha única como "Sim/Não" ou seleção de bebida.</li>
+    </ul>
+
+    <!-- REFERÊNCIAS -->
+    <br><br>
+    <h2>Referências</h2>
+    <p>Links úteis e oficiais para estudar mais sobre checkbox, radio, formulários e acessibilidade:</p>
+
+    <ul>
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input/checkbox" target="_blank">
+                MDN — input type checkbox
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio" target="_blank">
+                MDN — input type radio
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/form" target="_blank">
+                MDN — elemento form
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/label" target="_blank">
+                MDN — elemento label
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input#input_types" target="_blank">
+                MDN — tipos de input (visão geral)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://webaim.org/techniques/forms/" target="_blank">
+                WebAIM — Técnicas para formulários acessíveis
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.a11yproject.com/checklist/#forms" target="_blank">
+                A11Y Project — Checklist de acessibilidade para formulários
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3.org/TR/WCAG22/#input-modalities" target="_blank">
+                WCAG 2.2 — Padrões de acessibilidade relacionados a inputs
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3.org/WAI/tutorials/forms/" target="_blank">
+                WAI / W3C — Tutorial de formulários (acessibilidade)
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3c.br/pub/Materiais/PublicacoesW3C/cartilha-w3cbr-acessibilidade-web-fasciculo-IV.pdf" target="_blank">
+                W3C Brasil — Cartilha de Acessibilidade (PDF)
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>
