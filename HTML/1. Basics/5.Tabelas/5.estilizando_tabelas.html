@@ -1,75 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags <tbody>, <thead> e <tfoot></title>
-        <style>
-            table {
-                border: solid 1px black;
-                -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.49); 
-                box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.49);
-            }
-            table thead th {
-                background-color: black;
-                color: white;
-            }
-            table tbody tr:nth-child(even) td {
-                background-color: #f1f1f1;
-            }
-            table tbody tr:hover td {
-                background-color: #e9e9e9;
-                cursor: pointer;
-            }
-            table tfoot td {
-                background-color: lightgrey;
-            }
-        </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estilização de Tabelas no HTML</title>
+
+  <!-- Estilos básicos para foco em didática -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      margin-top: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse; /* Remove espaçamento interno */
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 10px; /* Estilização importante para melhor visualização */
+      text-align: left;
+    }
+
+    thead {
+      background-color: #e8e8e8; /* Destacando o cabeçalho */
+      font-weight: bold;
+    }
+
+    tfoot {
+      background-color: #f2f2f2; /* Destacando o rodapé */
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
-    <table cellpadding="5" cellspacing="0" summary="Esta é uma tabela a qual contém as idades dos alunos do SEG" align="center" width="250">
-        <caption>Tabela de idades dos alunos SEG</caption>
-        <thead align="center">
-            <tr>
-                <th colspan="2">Minha Tabela</th>
-            </tr>
-            <tr>
-                <th>Nome</th>
-                <th>Idade</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Lucas</td>
-                <td>22</td>
-            </tr>
-            <tr>
-                <td>Josué</td>
-                <td>34</td>
-            </tr>
-            <tr>
-                <td>Fernanda</td>
-                <td>23</td>
-            </tr>
-            <tr>
-                <td>Tatiana</td>
-                <td>42</td>
-            </tr>
-            <tr>
-                <td>Marcelo</td>
-                <td>44</td>
-            </tr>
-            <tr>
-                <td>Cristiane</td>
-                <td>40</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td>Total</td>
-                <td>6</td>
-            </tr>
-        </tfoot>
-    </table>
+
+  <!-- Introdução das tags -->
+  <h1>Estilização de Tabelas no HTML</h1>
+  <p>
+    Neste arquivo, vamos focar exclusivamente em como aplicar estilos CSS para deixar tabelas mais organizadas, legíveis e visualmente agradáveis. A estrutura básica da tabela já está pronta, e o objetivo principal é entender como cada seletor e propriedade influencia no resultado final.
+  </p>
+  <p>
+    Aqui você aprenderá a:
+  </p>
+  <ul>
+    <li>Aplicar bordas e sombras;</li>
+    <li>Estilizar cabeçalho, corpo e rodapé;</li>
+    <li>Criar efeito zebrado em linhas;</li>
+    <li>Adicionar destaque ao passar o mouse (hover);</li>
+    <li>Melhorar a leitura e aparência geral da tabela.</li>
+  </ul>
+  <p>
+    Estas tags não alteram o funcionamento da tabela por si só, mas ajudam na estruturação do conteúdo e facilitam a aplicação de estilos via CSS.
+  </p>
+
+  <h2>Exemplo Prático de Tabela com Estilização</h2>
+
+  <!-- Exemplo de tabela explicada -->
+  <table>
+    <thead>
+      <tr>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Luminária LED</td>
+        <td>15</td>
+        <td>R$ 120,00</td>
+      </tr>
+      <tr>
+        <td>Reator</td>
+        <td>8</td>
+        <td>R$ 75,00</td>
+      </tr>
+      <tr>
+        <td>Cabos</td>
+        <td>20</td>
+        <td>R$ 30,00</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="3">Valores sujeitos a alteração</td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <h2>Explicação do Processo</h2>
+  <p>
+    Para criar este arquivo voltado à estilização, utilizamos apenas HTML e CSS puro, mantendo tudo simples e direto para que os alunos compreendam facilmente a funcionalidade das tags. A estilização foi aplicada diretamente no elemento <code>&lt;style&gt;</code> no cabeçalho, para facilitar a visualização e evitar arquivos externos.
+  </p>
+  <p>
+    O objetivo principal deste arquivo é ensinar a função de cada parte da tabela e mostrar como o CSS pode ser aplicado para melhorar a leitura e organização dos dados.
+  </p>
+
+  <h2>Referências Bibliográficas</h2>
+  <p><a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">MDN Web Docs - HTML</a></p>
+  <p><a target="_blank" href="https://www.w3schools.com/html/html_tables.asp">W3Schools - HTML Tables</a></p>
+  <p><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Tables">MDN Web Docs — Estilizando Tabelas com CSS</a></p>
+   
 </body>
 </html>

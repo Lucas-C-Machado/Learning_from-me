@@ -1,45 +1,134 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tag <tr></title>
+    <title>Tag tr</title>
+
     <style>
-        table tr:nth-child(even) {
-            background-color:blue;
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
         }
+
+        table {
+            width: 350px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        /* Linha par com fundo azul */
+        table tr:nth-child(even) {
+            background-color: #1e3a8a;
+        }
+
+        /* Hover verde */
         table tr:hover td {
-            background-color: green;
+            background-color: #15803d;
+        }
+
+        h1, h2 {
+            margin-top: 25px;
         }
     </style>
 </head>
+
 <body>
-    <table summary="Esta é uma tabela onde contém uma coluna de numeração, uma coluna de nome completo e uma coluna de idade, contendo os meus dados" border="1" width="250" cellspace="5" cellpadding="10">
+
+    <h1>Tag tr</h1>
+    <p>
+        A tag <strong>tr</strong> é usada dentro de uma tabela para representar uma 
+        <strong>linha</strong>.  
+        Cada <strong>tr</strong> contém células (<strong>td</strong> ou <strong>th</strong>) que formam o conteúdo da tabela.
+    </p>
+
+    <h2>Como funciona</h2>
+    <ul>
+        <li><strong>tr</strong> cria uma nova linha na tabela.</li>
+        <li><strong>td</strong> representa células com dados.</li>
+        <li><strong>th</strong> representa células de cabeçalho.</li>
+        <li>Você pode estilizar cada linha usando CSS (como hover, cores, etc.).</li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+
+    <table summary="Tabela contendo numeração, nome completo e idade.">
         <tr>
-            <td align="center">N°</td>
-            <td align="center">Nome Completo</td>
-            <td align="center">Idade</td>
+            <th>N°</th>
+            <th>Nome Completo</th>
+            <th>Idade</th>
         </tr>
+
         <tr id="1">
-            <td align="center">1</td>
-            <td align="center">Lucas</td>
-            <td align="center">22</td>
+            <td>1</td>
+            <td>Lucas</td>
+            <td>22</td>
         </tr>
+
         <tr id="2">
-            <td align="center">2</td>
-            <td align="center">Fernanda</td>
-            <td align="center">23</td>
+            <td>2</td>
+            <td>Fernanda</td>
+            <td>23</td>
         </tr>
+
         <tr id="3">
-            <td align="center">3</td>
-            <td align="center">Tatiana</td>
-            <td align="center">42</td>
+            <td>3</td>
+            <td>Tatiana</td>
+            <td>42</td>
         </tr>
+
         <tr id="4">
-            <td align="center">4</td>
-            <td align="center">Marcelo</td>
-            <td align="center">44</td>
+            <td>4</td>
+            <td>Marcelo</td>
+            <td>44</td>
         </tr>
     </table>
+
+    <h2>Explicação do CSS aplicado</h2>
+    <ul>
+        <li>
+            <strong>nth-child(even)</strong>: aplica cor de fundo azul em linhas pares, 
+            facilitando a leitura (efeito zebra).
+        </li>
+        <li>
+            <strong>tr:hover</strong>: ao passar o mouse sobre a linha, ela muda para verde.
+        </li>
+        <li>
+            <strong>border-collapse: collapse</strong>: junta as bordas para visual mais limpo.
+        </li>
+    </ul>
+
+    <h2>Referências Bibliográficas</h2>
+    <p>Fontes oficiais para estudo da tag tr e tabelas em HTML:</p>
+
+    <ul style="line-height: 2;">
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tr" target="_blank">
+                MDN Web Docs – Elemento tr
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/tags/tag_tr.asp" target="_blank">
+                W3Schools – Tag HTML tr
+            </a>
+        </li>
+
+        <li>
+            <a href="https://html.com/tables/" target="_blank">
+                HTML.com – Guia de Tabelas HTML
+            </a>
+        </li>
+    </ul>
+
 </body>
+
 </html>

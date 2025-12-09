@@ -3,12 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags <tbody>, <thead> e <tfoot></title>
+    <title>Tags &lt;tbody&gt;, &lt;thead&gt; e &lt;tfoot&gt;</title>
 </head>
 <body>
-    <table cellpadding="5" cellspacing="0" summary="Esta é uma tabela a qual contém as idades dos alunos do SEG" align="center" width="250">
-        <caption>Tabela de idades dos alunos SEG</caption>
-        <thead align="center">
+
+    <!-- Introdução explicativa -->
+    <h1>Entendendo as tags &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;</h1>
+
+    <p>
+        Neste arquivo, vamos aprender sobre três partes importantes da estrutura de uma tabela em HTML:
+        <strong>&lt;thead&gt;</strong>, <strong>&lt;tbody&gt;</strong> e <strong>&lt;tfoot&gt;</strong>.  
+        Elas ajudam a organizar uma tabela de forma clara, separando o <strong>cabeçalho</strong>, o <strong>corpo</strong> 
+        e o <strong>rodapé</strong>.  
+        Além disso, facilitam a leitura e são muito utilizadas quando lidamos com grandes quantidades de dados.
+    </p>
+
+    <h2>Como a tabela foi construída?</h2>
+
+    <p>
+        A tabela abaixo utiliza:
+    </p>
+
+    <ul>
+        <li><strong>&lt;thead&gt;</strong> – onde ficam títulos e informações principais da tabela;</li>
+        <li><strong>&lt;tbody&gt;</strong> – onde os dados principais (linhas com nomes e idades) são inseridos;</li>
+        <li><strong>&lt;tfoot&gt;</strong> – onde mostramos informações finais, como totais.</li>
+    </ul>
+
+    <p>
+        Também foi utilizada a tag <strong>&lt;caption&gt;</strong> para adicionar um título visível no topo da tabela, 
+        facilitando a identificação do seu conteúdo.
+    </p>
+
+    <hr>
+
+    <!-- Tabela estruturada -->
+    <table border="1" cellpadding="5" cellspacing="0" summary="Esta é uma tabela a qual contém as idades dos alunos do SEG" align="center" width="250">
+        
+        <caption>Tabela de idades dos alunos do SEG</caption>
+
+        <thead>
             <tr>
                 <th colspan="2">Minha Tabela</th>
             </tr>
@@ -17,6 +51,7 @@
                 <th>Idade</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
                 <td>Lucas</td>
@@ -43,12 +78,44 @@
                 <td>40</td>
             </tr>
         </tbody>
+
         <tfoot>
             <tr>
                 <td>Total</td>
                 <td>6</td>
             </tr>
         </tfoot>
+
     </table>
+
+    <hr>
+
+    <h2>Referências Bibliográficas</h2>
+
+    <p>Para aprofundar seus conhecimentos sobre tabelas no HTML, você pode consultar:</p>
+
+    <ul>
+        <li>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/thead">
+                MDN Web Docs – Tag &lt;thead&gt;
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/tbody">
+                MDN Web Docs – Tag &lt;tbody&gt;
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/tfoot">
+                MDN Web Docs – Tag &lt;tfoot&gt;
+            </a>
+        </li>
+        <li>
+            <a target="_blank" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/table">
+                MDN Web Docs – Estrutura da tag &lt;table&gt;
+            </a>
+        </li>
+    </ul>
+
 </body>
 </html>

@@ -1,28 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tags <td> e <th></title>
+    <title>Tags td e th</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #000;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 320px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        th {
+            background: #e7e7e7;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) td {
+            background: #f2f6ff;
+        }
+
+        table tr:hover td {
+            background: #d4f7db;
+        }
+
+        h1, h2 {
+            margin-top: 25px;
+        }
+
+        a {
+            color: #0056d6;
+        }
+    </style>
 </head>
+
 <body>
-    <table width="250" align="center" summary="Esta é uma tabela de testes com os meus dados, como N° sendo 1 (uma pessoa), meu nome e minha idade" border="1" cellspace="5" cellpadding="10">
-        <tr id="1">
+
+    <h1>Tags td e th</h1>
+
+    <p>
+        As tags <strong>td</strong> e <strong>th</strong> são utilizadas para criar células dentro das linhas
+        (<strong>tr</strong>) de uma tabela HTML.  
+    </p>
+
+    <h2>Diferença entre td e th</h2>
+    <ul>
+        <li><strong>td</strong>: representa uma célula comum, usada para dados.</li>
+        <li><strong>th</strong>: representa uma célula de cabeçalho, geralmente exibida em negrito e centralizada.</li>
+    </ul>
+
+    <h2>Exemplo Prático</h2>
+
+    <table summary="Tabela demonstrando o uso de células de cabeçalho th e células de dados td.">
+        <tr>
             <th title="Nome Completo">Nome</th>
             <th>Idade</th>
         </tr>
-        <tr id="2">
+
+        <tr>
             <td>Fernanda</td>
             <td>23</td>
         </tr>
-        <tr id="3">
+
+        <tr>
             <td>Tatiana</td>
             <td>42</td>
         </tr>
-        <tr id="4">
+
+        <tr>
             <td>Marcelo</td>
             <td>44</td>
         </tr>
     </table>
+
+    <h2>Explicação visual do exemplo acima</h2>
+    <ul>
+        <li>Na primeira linha, foram utilizadas células <strong>th</strong>, pois representam títulos da tabela.</li>
+        <li>As linhas seguintes utilizam <strong>td</strong> para representar os valores reais (dados).</li>
+        <li>O CSS aplica:
+            <ul>
+                <li>Cor especial no cabeçalho (<strong>th</strong>).</li>
+                <li>Listras alternadas nas linhas, facilitando a leitura.</li>
+                <li>Efeito hover ao passar o mouse.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Boas Práticas</h2>
+    <ul>
+        <li>Sempre utilize <strong>th</strong> para cabeçalhos, não td.</li>
+        <li>Mantenha a tabela organizada com títulos claros.</li>
+        <li>Utilize <strong>summary</strong> para acessibilidade (leitores de tela).</li>
+        <li>Evite tabelas para layout; use apenas para dados tabulares.</li>
+    </ul>
+
+    <h2>Referências Bibliográficas</h2>
+
+    <ul style="line-height: 2;">
+        <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/td" target="_blank">
+                MDN Web Docs – Elemento td
+            </a>
+        </li>
+
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/th" target="_blank">
+                MDN Web Docs – Elemento th
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">
+                W3Schools – HTML Tables
+            </a>
+        </li>
+    </ul>
+
 </body>
+
 </html>

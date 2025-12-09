@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercício Final - Projeto Site de Clínica (Guia Completo)</title>
+  <style>
+    /* Estilos leves apenas para legibilidade do guia */
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #111; padding: 24px; max-width: 1100px; margin: auto; }
+    h1 { color: #0a6fbf; margin-bottom: 6px; }
+    h2 { color: #1a4f8a; margin-top: 26px; }
+    h3 { color: #2b6ca3; margin-top: 18px; }
+    p.lead { font-size: 1.05rem; color: #333; }
+    code, pre { background: #f4f4f4; border-left: 4px solid #e0e0e0; padding: 8px; display: block; overflow-x: auto; }
+    pre { padding: 12px; }
+    ul { margin-left: 20px; }
+    ol { margin-left: 20px; }
+    .box { border: 1px solid #e3e3e3; padding: 12px; border-radius: 6px; background: #fafafa; margin: 12px 0; }
+    .tip { border-left: 4px solid #0a6fbf; padding-left: 10px; background: #f1fbff; }
+    .example { background: #fff9e6; border-left: 4px solid #f0c14b; padding: 10px; }
+    table { border-collapse: collapse; margin-top: 8px; }
+    th, td { border: 1px solid #ccc; padding: 6px 10px; }
+    a { color: #0a6fbf; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <h1>Exercício Final: Projeto Site de Clínica — Guia Completo</h1>
+  <p class="lead">Este documento descreve detalhadamente o exercício solicitado (criar um site "quase" completo de uma clínica médica), explica o que deve ser feito, por que cada etapa importa e traz exemplos práticos e modelos para você copiar e adaptar.</p>
+
+  <h2>Visão geral do desafio</h2>
+  <p>
+    Objetivo: criar um site institucional simples de uma clínica (você escolhe a especialidade) aplicando os conceitos do módulo:
+  </p>
+  <ul>
+    <li>Estruturação e formatação de texto</li>
+    <li>Mídias (imagens, iframe)</li>
+    <li>Formulários</li>
+    <li>Tabelas (thead, tbody, tfoot, th, td)</li>
+    <li>Navegação entre páginas (links internos)</li>
+  </ul>
+
+  <h2>Resultado esperado</h2>
+  <p>Um mini-site com quatro páginas principais, todas seguindo o mesmo template visual (menu, header, content, footer):</p>
+  <ul>
+    <li>index.html — Página Principal</li>
+    <li>sobre.html — Sobre a clínica</li>
+    <li>servicos.html — Horários e serviços (com tabela)</li>
+    <li>contato.html — Formulário, telefones e mapa (iframe)</li>
+  </ul>
+
+  <h2>Estrutura de arquivos sugerida</h2>
+  <pre><code>/projeto-clinica
+├── index.html
+├── sobre.html
+├── servicos.html
+├── contato.html
+├── template.html
+└── /imagens
+     ├── header-index.jpg
+     ├── header-sobre.jpg
+     ├── header-servicos.jpg
+     └── header-contato.jpg
+</code></pre>
+
+  <h2>Template base (modelo) — como organizar cada página</h2>
+  <p>Criar um arquivo <code>template.html</code> só para referência ajuda a manter padrão. Exemplo mínimo de estrutura que você deve replicar em cada página:</p>
+
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Nome da Página - Clínica X&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;nav&gt; <!-- Menu de navegação comum a todas as páginas --&gt; &lt;/nav&gt;
+    &lt;img src="imagens/header-pagina.jpg" alt="capa"&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt; &lt;!-- Content específico de cada página --&gt; &lt;/main&gt;
+
+  &lt;footer&gt; Informações de contato e direitos autorais &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h2>Menu de navegação</h2>
+  <p>O menu deve aparecer em todas as páginas e conter links internos (relativos), por exemplo:</p>
+  <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Página Principal&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="sobre.html"&gt;Sobre a clínica&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="servicos.html"&gt;Horário de Atendimento&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+  <hr />
+
+  <h2>Detalhamento por página (o que deve conter e exemplos)</h2>
+
+  <h3>1) index.html — Página Principal</h3>
+  <p>Conteúdo mínimo:</p>
+  <ul>
+    <li>Imagem no header (exemplo: header-index.jpg)</li>
+    <li>Breve descrição da clínica (2 a 4 parágrafos curtos)</li>
+    <li>Links para as outras páginas (menu já faz isso)</li>
+    <li>Footer com telefone e endereço</li>
+  </ul>
+
+  <p class="example">Exemplo simples de content</p>
+  <pre><code>&lt;main&gt;
+  &lt;h1&gt;Clínica Saúde e Cuidado&lt;/h1&gt;
+  &lt;p&gt;A Clínica Saúde e Cuidado oferece atendimento em Dermatologia especializada para todas as idades. Nossa missão é...&lt;/p&gt;
+&lt;/main&gt;
+</code></pre>
+
+  <h3>2) sobre.html — Sobre a clínica</h3>
+  <p>Conteúdo mínimo:</p>
+  <ul>
+    <li>Imagem diferente no header</li>
+    <li>Texto detalhado: história da clínica, equipe, missão/visão/valores</li>
+    <li>Uso de listas e subtítulos para organizar a leitura</li>
+  </ul>
+
+  <h3>3) servicos.html — Horário de Atendimento e tabela</h3>
+  <p>Esta página é focada em tabelas. Deve conter:</p>
+  <ul>
+    <li>Imagem de header específica</li>
+    <li>Pequeno texto introdutório</li>
+    <li>Tabela com os serviços e horários</li>
+  </ul>
+
+  <p class="example">Exemplo de tabela (use &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;):</p>
+  <pre><code>&lt;table summary="Tabela de horários e serviços"&gt;
+  &lt;caption&gt;Horários e Serviços&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Serviço&lt;/th&gt;&lt;th&gt;Seg a Sex&lt;/th&gt;&lt;th&gt;Sábados&lt;/th&gt;&lt;th&gt;Feriados&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Clínica Geral&lt;/td&gt;&lt;td&gt;08h - 19h&lt;/td&gt;&lt;td&gt;08h - 14h&lt;/td&gt;&lt;td&gt;08h - 14h&lt;/td&gt;&lt;/tr&gt;
+    &lt;!-- outras linhas --&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td colspan=&quot;4&quot;&gt;Observações: agendar com antecedência&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+
+  <h3>4) contato.html — Formulário e mapa</h3>
+  <p>Conteúdo mínimo e obrigatório:</p>
+  <ul>
+    <li>Imagem no header</li>
+    <li>Telefones (celular e WhatsApp)</li>
+    <li>Endereço completo</li>
+    <li>Iframe do Google Maps apontando ao endereço (embed)</li>
+    <li>Formulário com campos: Nome, E-mail, Assunto, Mensagem, Botões Enviar e Limpar</li>
+  </ul>
+
+  <p class="example">Exemplo básico de formulário</p>
+  <pre><code>&lt;form action="#" method="post"&gt;
+  &lt;label for="nome"&gt;Nome&lt;/label&gt;
+  &lt;input type="text" id="nome" name="nome" required&gt;
+
+  &lt;label for="email"&gt;E-mail&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;
+
+  &lt;label for="assunto"&gt;Assunto&lt;/label&gt;
+  &lt;input type="text" id="assunto" name="assunto"&gt;
+
+  &lt;label for="mensagem"&gt;Mensagem&lt;/label&gt;
+  &lt;textarea id="mensagem" name="mensagem" rows="5"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+  &lt;button type="reset"&gt;Limpar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+  <p class="example">Exemplo básico de iframe do Google Maps (substitua a src pelo embed do seu endereço)</p>
+  <pre><code>&lt;iframe
+  src="https://www.google.com/maps/embed?pb=SEU_CODE_AQUI"
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"&gt;
+&lt;/iframe&gt;
+</code></pre>
+
+  <hr />
+
+  <h2>Regras obrigatórias e boas práticas</h2>
+  <ol>
+    <li>Use apenas HTML sem dependências externas (CSS externo opcional, mas não obrigatório para o desafio).</li>
+    <li>Menu e footer devem ser idênticos em todas as páginas — consistência importa.</li>
+    <li>Use tags semânticas (header, main, footer, nav) quando possível.</li>
+    <li>Formulário deve ter tipos corretos (email, text) e botões type corretos (submit, reset).</li>
+    <li>Tabelas devem usar thead, tbody, tfoot e cabeçalhos th.</li>
+    <li>As imagens devem ter atributo alt com descrição curta.</li>
+    <li>Evite atributos de apresentação antigos (align, cellpadding) — prefira CSS quando souber usar.</li>
+  </ol>
+
+  <h2>Checklist de entrega</h2>
+  <div class="box">
+    <ul>
+      <li>index.html presente e funcional</li>
+      <li>sobre.html presente e funcional</li>
+      <li>servicos.html com tabela organizada (thead/tbody/tfoot)</li>
+      <li>contato.html com formulário e iframe do Google Maps</li>
+      <li>menu e footer consistentes em todas as páginas</li>
+      <li>todas as imagens têm alt</li>
+      <li>links relativos funcionando (abrir localmente)</li>
+    </ul>
+  </div>
+
+  <h2>Dicas pedagógicas e variações de exercício</h2>
+  <ul>
+    <li class="tip">Variação 1: faça a clínica ser de outra especialidade (pediatria, oftalmologia) e adapte os serviços.</li>
+    <li class="tip">Variação 2: crie uma página extra com um pequeno FAQ (uso de listas e títulos).</li>
+    <li class="tip">Variação 3: adicione microconteúdos como cards com horários, usando listas e imagens.</li>
+  </ul>
+
+  <h2>Como testar localmente</h2>
+  <ol>
+    <li>Salve os arquivos numa pasta (ver estrutura sugerida).</li>
+    <li>Abra index.html no navegador (duplo clique ou arraste para a janela do navegador).</li>
+    <li>Navegue pelo menu e verifique cada link.</li>
+    <li>Testar formulário: ao clicar em Enviar, se action="#" a página vai recarregar; isso está OK para o exercício (a lógica de backend não é exigida aqui).</li>
+    <li>Validar HTML: opcionalmente, use https://validator.w3.org para checar validade.</li>
+  </ol>
+
+  <h2>Critérios de avaliação sugeridos (se for usado por professor)</h2>
+  <ul>
+    <li>Estrutura correta e semântica — 30%</li>
+    <li>Uso correto de formulários e inputs — 20%</li>
+    <li>Tabelas bem construídas com thead/tbody/tfoot — 20%</li>
+    <li>Consistência do menu/rodapé e navegação — 10%</li>
+    <li>Documentação/README curto explicando como executar — 10%</li>
+    <li>Cuidados com acessibilidade básica (alt em imagens, scope em th) — 10%</li>
+  </ul>
+
+  <h2>Modelos e snippets práticos</h2>
+
+  <h3>Menu (copiar para todas as páginas)</h3>
+  <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Página Principal&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="sobre.html"&gt;Sobre a clínica&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="servicos.html"&gt;Horário de Atendimento&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contato.html"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+
+  <h3>Exemplo completo de servicos.html (esqueleto)</h3>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Horários e Serviços - Clínica Exemplo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- incluir menu padrão --&gt;
+
+  &lt;header&gt;
+    &lt;img src=&quot;imagens/header-servicos.jpg&quot; alt=&quot;Serviços&quot;&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;h1&gt;Horários e Serviços&lt;/h1&gt;
+    &lt;p&gt;Abaixo a tabela com nossos serviços e horários.&lt;/p&gt;
+
+    &lt;table summary=&quot;Horários e serviços da clínica&quot;&gt;
+      &lt;caption&gt;Horários e Serviços&lt;/caption&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;Serviço&lt;/th&gt;&lt;th&gt;Seg a Sex&lt;/th&gt;&lt;th&gt;Sábados&lt;/th&gt;&lt;th&gt;Feriados&lt;/th&gt;&lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;Clínica geral&lt;/td&gt;&lt;td&gt;08h - 19h&lt;/td&gt;&lt;td&gt;08h - 14h&lt;/td&gt;&lt;td&gt;08h - 14h&lt;/td&gt;&lt;/tr&gt;
+        &lt;!-- mais linhas --&gt;
+      &lt;/tbody&gt;
+      &lt;tfoot&gt;
+        &lt;tr&gt;&lt;td colspan=&quot;4&quot;&gt;Agende sua consulta pelo telefone&lt;/td&gt;&lt;/tr&gt;
+      &lt;/tfoot&gt;
+    &lt;/table&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;&lt;p&gt;Endereço e telefones aqui&lt;/p&gt;&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <h2>Referências recomendadas</h2>
+  <ul>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">MDN Web Docs — HTML</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/table" target="_blank">MDN — Elemento table (thead, tbody, tfoot)</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/form" target="_blank">MDN — Elemento form</a></li>
+    <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe" target="_blank">MDN — Elemento iframe</a></li>
+  </ul>
+
+  <h2>Entrega e boas práticas finais</h2>
+  <p>
+    - Entregue a pasta com os arquivos HTML e imagens incluídas.  
+    - Adicione um pequeno arquivo README.txt explicando como abrir (basta abrir index.html).  
+    - Verifique todos os links locais.  
+    - Valide o HTML se desejar com o validador do W3C.
+  </p>
+
+  <div class="box">
+    <strong>Se quiser, eu posso:</strong>
+    <ul>
+      <li>Gerar automaticamente o template.html</li>
+      <li>Criar as 4 páginas (index, sobre, servicos, contato) completas e prontas para você adaptar</li>
+      <li>Adicionar comentários didáticos dentro dos arquivos para usar em aula</li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 18px;">Quer que eu gere as 4 páginas prontas agora, com conteúdo exemplo (que você pode editar e adaptar)?</p>
+
+</body>
+</html>
+S

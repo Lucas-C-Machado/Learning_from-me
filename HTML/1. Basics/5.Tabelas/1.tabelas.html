@@ -1,20 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trabalhando com Tabelas</title>
+
+    <!-- 
+        ESTILIZAÇÃO BÁSICA APENAS PARA DEIXAR A TABELA MAIS BONITA
+
+        border-collapse: une as bordas das células
+        width: largura da tabela
+        padding: espaço dentro das células
+    -->
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 350px;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #e3e3e3;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <table summary="Esta tabela é referente ao meu nome e idade" border="1" width="250" cellspacing="5" cellpadding="10">
+
+    <h1>Trabalhando com Tabelas no HTML</h1>
+
+    <p>
+        As tabelas servem para organizar informações em formato de linhas e colunas.  
+        Elas funcionam como uma "planilha" dentro do site, onde você coloca dados de forma clara e organizada.
+    </p>
+
+    <h2>Exemplo Simples de Tabela</h2>
+
+    <!-- 
+        <table> cria a tabela
+        <tr> cria uma linha
+        <th> cria células de título (cabeçalho)
+        <td> cria células de conteúdo
+    -->
+    <table summary="Esta tabela mostra nome e idade">
         <tr>
-            <td align="center">Nome</td>
-            <td align="center">Idade</td>
+            <th>Nome</th>
+            <th>Idade</th>
         </tr>
+
         <tr>
-            <td align="center">Lucas</td>
-            <td align="center">22</td>
+            <td>Lucas</td>
+            <td>22</td>
         </tr>
     </table>
+
+    <hr />
+
+    <h2>Exemplo com Mais Informações</h2>
+
+    <p>
+        Abaixo está uma tabela maior, apenas para mostrar que você pode repetir várias linhas sem problema algum.
+    </p>
+
+    <table summary="Tabela com produtos, quantidades e preços">
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço</th>
+        </tr>
+
+        <tr>
+            <td>Mouse</td>
+            <td>10</td>
+            <td>R$ 59,90</td>
+        </tr>
+
+        <tr>
+            <td>Teclado</td>
+            <td>6</td>
+            <td>R$ 120,00</td>
+        </tr>
+
+        <tr>
+            <td>Monitor</td>
+            <td>3</td>
+            <td>R$ 899,00</td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <h2>Resumo Fácil para o Aluno</h2>
+
+    <p>A estrutura básica de uma tabela é:</p>
+
+    <ul>
+        <li><strong>&lt;table&gt;</strong> → cria a tabela</li>
+        <li><strong>&lt;tr&gt;</strong> → cria uma linha</li>
+        <li><strong>&lt;td&gt;</strong> → cria uma célula comum (dados)</li>
+        <li><strong>&lt;th&gt;</strong> → cria um cabeçalho (título das colunas)</li>
+    </ul>
+
+    <p>
+        A tabela nada mais é do que uma sequência de linhas (&lt;tr&gt;) que contém células (&lt;td&gt; ou &lt;th&gt;).  
+        Isso torna os dados fáceis de visualizar e organizar.
+    </p>
+
+    <hr />
+
+    <h2>Referências Bibliográficas</h2>
+
+    <p>
+        Todas as informações sobre tabelas foram baseadas em fontes oficiais e confiáveis:
+    </p>
+    
+    <ul style="line-height: 2;">
+        <li>
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/table" target="_blank">
+                MDN Web Docs – Tabelas HTML
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">
+                W3Schools – HTML Tables
+            </a>
+        </li>
+    
+        <li>
+            <a href="https://html.com/tables/" target="_blank">
+                HTML.com – Guia simples e acessível sobre tabelas
+            </a>
+        </li>
+    </ul>    
+
 </body>
 </html>
