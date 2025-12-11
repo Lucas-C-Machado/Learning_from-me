@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mudanças do HTML4 para o HTML5 — Guia Didático</title>
+
+  <style>
+    /* Estilos leves para melhorar leitura em aula */
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #111; margin: 20px; max-width: 1000px; }
+    header h1 { color: #0b63b5; margin-bottom: 6px; }
+    section, article { margin: 18px 0; padding: 12px; border-left: 4px solid #e6eef9; background: #fbfdff; }
+    pre { background: #f4f4f4; padding: 12px; overflow-x: auto; border: 1px solid #ddd; }
+    code { font-family: Consolas, monospace; color: #c7254e; }
+    h2 { color: #0a5a9a; }
+    ul { margin-left: 18px; }
+    .example { border: 1px dashed #ddd; padding: 8px; background: #fff; margin-top: 8px; }
+    footer { margin-top: 30px; font-size: 0.95rem; color: #444; }
+    .note { background: #fff6e6; border-left: 4px solid #f0ad4e; padding: 10px; margin: 10px 0; }
+    a { color: #0b63b5; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mudanças do HTML4 para o HTML5</h1>
+    <p>
+      Este documento explica, de forma contínua e didática, as principais diferenças entre HTML4 e HTML5.
+      Serão apresentadas as razões das mudanças, exemplos práticos que você pode testar na sua IDE (por exemplo VS Code),
+      e pequenas demonstrações de código que ilustram como migrar ou usar os recursos novos.
+    </p>
+  </header>
+
+  <nav>
+    <p>
+      Estrutura do guia:
+      <strong>1</strong> Doctype e estrutura; <strong>2</strong> Semântica; <strong>3</strong> Mídia nativa;
+      <strong>4</strong> Formulários modernos; <strong>5</strong> Canvas, SVG e gráficos; <strong>6</strong> API e armazenamento;
+      <strong>7</strong> Elementos e atributos depreciados; <strong>8</strong> Acessibilidade e boas práticas.
+    </p>
+  </nav>
+
+  <section>
+    <h2>1. Doctype e estrutura básica</h2>
+    <p>
+      Em HTML4 o doctype era longo e específico, por exemplo:
+    </p>
+    <pre><code>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd"&gt;</code></pre>
+
+    <p>
+      Em HTML5 o doctype foi simplificado para uma única linha, tornando mais fácil começar um documento e reduzindo confusão:
+    </p>
+    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+
+    <p>
+      <strong>Por que isso importa?</strong> Porque o doctype declara o modo de renderização do navegador (standards mode) e
+      a simplificação do HTML5 facilita a criação de arquivos sem erros de sintaxe ligados ao tipo de DTD.
+    </p>
+
+    <div class="example">
+      <strong>Como testar na prática:</strong> crie um arquivo index.html com a linha &lt;!DOCTYPE html&gt; no topo,
+      abra no navegador e veja que você já está em modo padrão. O VS Code e outros editores reconhecem automaticamente.
+    </div>
+  </section>
+
+  <article>
+    <h2>2. Semântica: novas tags estruturais</h2>
+
+    <p>
+      HTML5 introduziu várias tags semânticas que trazem significado ao documento (não apenas aparência).
+      Em HTML4 costumávamos usar &lt;div&gt; com classes para separar seções. Em HTML5 usamos tags específicas:
+    </p>
+
+    <ul>
+      <li>&lt;header&gt; — cabeçalho da página ou de uma seção;</li>
+      <li>&lt;nav&gt; — bloco de navegação;</li>
+      <li>&lt;main&gt; — conteúdo principal;</li>
+      <li>&lt;article&gt; — conteúdo independente (post, notícia, artigo);</li>
+      <li>&lt;section&gt; — seção genérica do documento;</li>
+      <li>&lt;aside&gt; — conteúdo complementar ou lateral;</li>
+      <li>&lt;footer&gt; — rodapé da página ou seção.</li>
+    </ul>
+
+    <p>
+      Essas tags melhoram a leitura por desenvolvedores e por leitores de tela (acessibilidade), além de facilitar a indexação por mecanismos de busca.
+    </p>
+
+    <pre><code>&lt;header&gt;
+  &lt;h1&gt;Nome do site&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt; ... &lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;article&gt; ... &lt;/article&gt;
+  &lt;aside&gt; ... &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt; ... &lt;/footer&gt;</code></pre>
+
+    <div class="example">
+      <strong>Como fizemos este arquivo:</strong> no topo já usamos &lt;header&gt;, &lt;nav&gt;, &lt;section&gt; e &lt;article&gt;.
+      Isso permite demonstrar aos alunos a semântica na prática. Se antes só havia divs genéricas, agora cada bloco tem
+      significado próprio.
+    </div>
+  </article>
+
+  <section>
+    <h2>3. Mídia nativa: áudio e vídeo sem plugins</h2>
+
+    <p>
+      No HTML4, para inserir mídia muitas vezes era necessário usar plugins externos como Flash. HTML5 trouxe elementos
+      nativos para áudio e vídeo: &lt;audio&gt; e &lt;video&gt;.
+    </p>
+
+    <pre><code>&lt;!-- Vídeo simples com legendas --&gt;
+&lt;video controls width="640" poster="capa.jpg"&gt;
+  &lt;source src="meuvideo.mp4" type="video/mp4"&gt;
+  &lt;source src="meuvideo.webm" type="video/webm"&gt;
+  &lt;track kind="captions" srclang="pt-BR" src="legenda.vtt" default&gt;
+  Seu navegador nao suporta o elemento video.
+&lt;/video&gt;</code></pre>
+
+    <p>
+      <strong>Prática:</strong> Coloque um arquivo de vídeo na pasta do projeto e atualize o src. Use o atributo controls
+      para mostrar a interface padrão (play, pause, volume). Para legendas use arquivo WebVTT com &lt;track&gt;.
+    </p>
+
+    <div class="note">
+      Observação: nem todos os navegadores suportam todos os codecs, por isso ofereça mais de um &lt;source&gt; (mp4, webm).
+    </div>
+  </section>
+
+  <article>
+    <h2>4. Formulários modernos</h2>
+
+    <p>
+      HTML5 trouxe novos tipos de input e atributos que reduzem a dependência de JavaScript para validação básica.
+      Exemplos incluem types: date, email, url, number, search, tel, range, color.
+    </p>
+
+    <pre><code>&lt;form action=&quot;#&quot; method=&quot;post&quot;&gt;
+  &lt;label for=&quot;email&quot;&gt;E-mail&lt;/label&gt;
+  &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
+
+  &lt;label for=&quot;nasc&quot;&gt;Data de nascimento&lt;/label&gt;
+  &lt;input type=&quot;date&quot; id=&quot;nasc&quot; name=&quot;nasc&quot;&gt;
+
+  &lt;label for=&quot;cor&quot;&gt;Cor preferida&lt;/label&gt;
+  &lt;input type=&quot;color&quot; id=&quot;cor&quot; name=&quot;cor&quot;&gt;
+
+  &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+    <p>
+      Atributos úteis: <code>required</code>, <code>placeholder</code>, <code>autofocus</code>, <code>pattern</code>, <code>min</code>, <code>max</code>, <code>step</code>.
+      Eles ajudam a validar dados já no navegador.
+    </p>
+
+    <div class="example">
+      <strong>Como testar:</strong> abra a página em um navegador moderno e tente submeter o formulário vazio para ver o comportamento de required.
+      Experimente inserir um e-mail inválido e note a validação nativa.
+    </div>
+  </article>
+
+  <section>
+    <h2>5. Canvas, SVG e gráficos</h2>
+
+    <p>
+      HTML5 trouxe a tag &lt;canvas&gt; para desenho 2D via JavaScript e também incentivou o uso de SVG inline.
+      Antes era comum gerar gráficos do lado do servidor ou usar plugins; agora há APIs nativas.
+    </p>
+
+    <pre><code>&lt;!-- Canvas simples em HTML5 --&gt;
+&lt;canvas id=&quot;meuCanvas&quot; width=&quot;300&quot; height=&quot;150&quot;&gt;Seu navegador nao suporta canvas.&lt;/canvas&gt;
+
+&lt;script&gt;
+  var c = document.getElementById('meuCanvas');
+  var ctx = c.getContext('2d');
+  ctx.fillStyle = '#0099cc';
+  ctx.fillRect(10, 10, 100, 50);
+&lt;/script&gt;</code></pre>
+
+    <p>
+      <strong>Dica prática:</strong> peça aos alunos para desenhar formas simples e, depois, construir um pequeno gráfico de barras
+      usando retângulos preenchidos.
+    </p>
+  </section>
+
+  <article>
+    <h2>6. APIs, armazenamento e novas possibilidades</h2>
+
+    <p>
+      HTML5 é muito mais que novas tags: traz APIs que permitem criar aplicações ricas no navegador:
+    </p>
+
+    <ul>
+      <li>localStorage / sessionStorage — armazenamento simples de chave/valor no navegador;</li>
+      <li>Geolocation API — obter localização do usuário (com permissão);</li>
+      <li>Fetch API — requisições HTTP modernas (substitui XMLHttpRequest em muitos casos);</li>
+      <li>Web Workers — threads de background para processamentos longos;</li>
+      <li>History API — controlar histórico sem recarregar páginas;</li>
+      <li>Drag and Drop, Drag events — suporte nativo a arrastar e soltar.</li>
+    </ul>
+
+    <pre><code>&lt;!-- Exemplo simples localStorage --&gt;
+&lt;script&gt;
+  // salvar
+  localStorage.setItem('usuario', 'Lucas');
+  // ler
+  var nome = localStorage.getItem('usuario');
+  console.log('Usuário salvo', nome);
+&lt;/script&gt;</code></pre>
+
+    <p>
+      Essas APIs aproximam o front-end do que antes só era possível com aplicações nativas ou plugins.
+    </p>
+  </article>
+
+  <section>
+    <h2>7. Elementos e atributos depreciados</h2>
+
+    <p>
+      HTML5 marcou elementos antigos como obsoletos e recomendou alternativas:
+    </p>
+
+    <ul>
+      <li>&lt;font&gt; — use CSS para tipografia;</li>
+      <li>&lt;center&gt; — use CSS (text-align:center);</li>
+      <li>atributos de apresentação como <code>bgcolor</code>, <code>align</code>, <code>border</code> em tabelas — prefira CSS;</li>
+      <li>Flash e outros plugins — substituídos por &lt;video&gt; e &lt;audio&gt; e por APIs modernas.</li>
+    </ul>
+
+    <div class="example">
+      <strong>Migração prática:</strong> em vez de &lt;font color="red"&gt;Texto&lt;/font&gt;, faça:
+      <pre><code>&lt;span style="color:red"&gt;Texto&lt;/span&gt;  /* ou melhor, via classe CSS */</code></pre>
+    </div>
+  </section>
+
+  <article>
+    <h2>8. Acessibilidade e SEO</h2>
+
+    <p>
+      HTML5 facilita melhores práticas de acessibilidade quando usamos marcação semântica correta
+      (header, nav, main, article, aside, footer), atributos como <code>alt</code> em imagens, e
+      o uso de <code>aria-*</code> quando necessário. Para SEO, motores de busca entendem melhor a
+      estrutura semântica do documento.
+    </p>
+
+    <pre><code>&lt;img src=&quot;dr.jpg&quot; alt=&quot;Dr. Silva atendendo paciente&quot;&gt;</code></pre>
+
+    <p>
+      Use <code>&lt;h1&gt;</code> apenas uma vez por página para título principal, depois <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code> etc.
+    </p>
+  </article>
+
+  <section>
+    <h2>Exemplo integrado prático</h2>
+
+    <p>
+      Abaixo segue um pequeno exemplo que junta: semântica, vídeo, formulário com input moderno e armazenamento local.
+      Copie o bloco para um arquivo e teste no navegador.
+    </p>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;title&gt;Exemplo integrado&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Clínica Exemplo&lt;/h1&gt;&lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;Vídeo institucional&lt;/h2&gt;
+      &lt;video controls width=&quot;480&quot;&gt;
+        &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+      &lt;/video&gt;
+    &lt;/article&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;Contato rápido&lt;/h2&gt;
+      &lt;form id=&quot;f&quot;&gt;
+        &lt;label for=&quot;n&quot;&gt;Nome&lt;/label&gt;
+        &lt;input id=&quot;n&quot; type=&quot;text&quot; required&gt;
+
+        &lt;label for=&quot;e&quot;&gt;E-mail&lt;/label&gt;
+        &lt;input id=&quot;e&quot; type=&quot;email&quot; required&gt;
+
+        &lt;button type=&quot;submit&quot;&gt;Enviar&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;script&gt;
+    // salva nome no localStorage quando o form for submetido
+    document.getElementById('f').addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var nome = document.getElementById('n').value;
+      localStorage.setItem('nomeContato', nome);
+      alert('Nome salvo localmente: ' + nome);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <div class="note">
+      Teste esse exemplo substituindo video.mp4 por um arquivo de vídeo local. O formulário usa validação nativa
+      e salva o nome no localStorage como demonstração da API.
+    </div>
+  </section>
+
+  <article>
+    <h2>9. Checklist de diferenças rápidas (resumo para memorização)</h2>
+    <ul>
+      <li>Doctype simplificado: &lt;!DOCTYPE html&gt;.</li>
+      <li>Tags semânticas adicionadas: header, nav, main, article, section, aside, footer.</li>
+      <li>Mídia nativa: &lt;audio&gt; e &lt;video&gt;.</li>
+      <li>Canvas e SVG para gráficos e desenhos.</li>
+      <li>Novos tipos de input e atributos para formulários.</li>
+      <li>APIs do navegador: localStorage, Geolocation, Fetch, Web Workers.</li>
+      <li>Elementos e atributos antigos depreciados: font, center, bgcolor, align.</li>
+      <li>Melhor suporte a acessibilidade e SEO com marcação semântica.</li>
+    </ul>
+  </article>
+
+  <section>
+    <h2>10. Como eu construi este material e como você pode replicar</h2>
+
+    <p>
+      Processo de construção deste arquivo:
+    </p>
+    <ol>
+      <li>Escolhi os tópicos mais relevantes para transição HTML4 → HTML5 (doctype, semântica, mídia, formulários, APIs).</li>
+      <li>Para cada tópico escrevi uma explicação curta, seguida de um exemplo de código que você pode testar localmente.</li>
+      <li>Incluí dicas práticas e formas de testar em um editor (VS Code recomendado): criar um arquivo .html, colar o exemplo e abrir no navegador.</li>
+      <li>Adicionei pequenos blocos de JavaScript apenas para demonstrar integração com APIs (localStorage) e comportamento real dos inputs.</li>
+    </ol>
+
+    <p>
+      Recomendações para você, estudante:
+    </p>
+    <ul>
+      <li>Copie e cole os blocos de código em arquivos separados e teste no navegador.</li>
+      <li>Use DevTools (F12) para inspecionar elementos e console para ver logs do localStorage e mensagens.</li>
+      <li>Leia as referências abaixo para aprofundar cada tópico.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <h2>Referências bibliográficas e fontes</h2>
+    <p>
+      As informações deste documento foram compiladas a partir de fontes oficiais e reconhecidas, entre elas:
+    </p>
+    <ul>
+      <li>
+        MDN Web Docs — Introdução ao HTML e elementos semânticos:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/HTML</a>
+      </li>
+      <li>
+        MDN Web Docs — Elementos semânticos (header, nav, article, section, aside, footer):
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element</a>
+      </li>
+      <li>
+        MDN Web Docs — Multimedia elements (video, audio, track):
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/video" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/video</a>
+      </li>
+      <li>
+        MDN Web Docs — Forms and input types:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/input</a>
+      </li>
+      <li>
+        MDN Web Docs — Canvas API:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/API/Canvas_API</a>
+      </li>
+      <li>
+        WHATWG HTML Living Standard — especificação completa do HTML:
+        <a href="https://html.spec.whatwg.org/multipage/" target="_blank">https://html.spec.whatwg.org/multipage/</a>
+      </li>
+      <li>
+        MDN Web Docs — Web Storage API (localStorage):
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API" target="_blank">https://developer.mozilla.org/pt-BR/docs/Web/API/Web_Storage_API</a>
+      </li>
+    </ul>
+  </footer>
+
+</body>
+</html>

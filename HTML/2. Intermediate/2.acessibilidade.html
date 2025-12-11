@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade no HTML5 — Guia Didático Completo</title>
+
+    <style>
+        /* Estilização mínima apenas para fins didáticos */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        .exemplo {
+            padding: 10px;
+            background: #f7f7f7;
+            border-left: 4px solid #444;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Acessibilidade no HTML5</h1>
+
+    <p>
+        A acessibilidade digital consiste em permitir que pessoas com deficiência visual, auditiva, motora ou cognitiva 
+        utilizem a web com autonomia.  
+        O HTML5 trouxe uma série de melhorias para tornar páginas mais compreensíveis para tecnologias assistivas, 
+        como leitores de tela (ex: NVDA, JAWS, Narrator).
+    </p>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <h2>1. Testando Acessibilidade pelo Navegador — Painel F12</h2>
+    <!-- ========================================================= -->
+
+    <p>
+        Modernos navegadores possuem um módulo dedicado à acessibilidade.  
+        No Chrome, por exemplo, você encontra assim:
+    </p>
+
+    <ol>
+        <li>Aperte <strong>F12</strong> para abrir o DevTools.</li>
+        <li>Clique em <strong>More Tools</strong> (ou “Mais Ferramentas”).</li>
+        <li>Selecione <strong>Acessibilidade</strong>.</li>
+        <li>A interface mostrará como o leitor de tela enxerga sua página.</li>
+    </ol>
+
+    <p>
+        Dentro desse painel existe o ícone do <strong>boneco</strong>, onde você pode visualizar:
+    </p>
+
+    <ul>
+        <li>O nome acessível de cada elemento.</li>
+        <li>A descrição e propósito das tags.</li>
+        <li>Se algum elemento está sem descrição adequada (ex: “imagem sem alt”).</li>
+    </ul>
+
+    <div class="exemplo">
+        <p><strong>Exemplo:</strong> A imagem abaixo possui um texto alternativo adequado:</p>
+
+        <img src="img/frase_motivacional.webp" 
+            alt="Frase motivacional: Onde você está é sempre o melhor lugar para começar." 
+            width="400">
+    </div>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <h2>2. NVDA — Ferramenta Profissional de Leitura de Tela</h2>
+    <!-- ========================================================= -->
+
+    <p>
+        O <strong>NVDA (NonVisual Desktop Access)</strong> é um dos leitores de tela mais usados do mundo, 
+        totalmente gratuito e altamente recomendado para testes reais de acessibilidade.
+    </p>
+
+    <h3>Como baixar o NVDA:</h3>
+
+    <ol>
+        <li>Acesse: <a href="https://www.nvaccess.org" target="_blank">nvaccess.org</a></li>
+        <li>Clique em <strong>Download</strong>.</li>
+        <li>Instale e execute.</li>
+    </ol>
+
+    <h3>Como funciona na prática:</h3>
+
+    <ul>
+        <li>Ele lê tudo o que está na tela.</li>
+        <li>Interpreta títulos, links, botões e textos alternativos.</li>
+        <li>Reconhece atributos ARIA (explicados abaixo).</li>
+        <li>Ajuda a identificar erros estruturais na página.</li>
+    </ul>
+
+    <p>
+        Para testar seu site, com o NVDA ativado, navegue usando:
+    </p>
+
+    <ul>
+        <li><strong>H</strong> — navegar por títulos</li>
+        <li><strong>Tab</strong> — navegar por elementos interativos</li>
+        <li><strong>Insert + F7</strong> — exibir lista de elementos</li>
+    </ul>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <h2>3. Atributos ARIA — Acessibilidade Reforçada</h2>
+    <!-- ========================================================= -->
+
+    <p>
+        ARIA (Accessible Rich Internet Applications) é um conjunto de atributos 
+        que tornam componentes mais compreensíveis para leitores de tela.
+    </p>
+
+    <h3>🔹 aria-expanded</h3>
+    <p>
+        Indica se uma seção está expandida ou oculta.  
+        Exemplo real:
+    </p>
+
+    <div class="exemplo">
+
+        <button aria-expanded="false" aria-controls="conteudo-exemplo" id="btnExemplo">
+            Mostrar detalhes
+        </button>
+
+        <div id="conteudo-exemplo" hidden>
+            <p>Este texto aparece e some com o botão, e o leitor de tela entende isso corretamente.</p>
+        </div>
+
+        <script>
+            // Exemplo funcional de como aria-expanded deve ser atualizado:
+            const btn = document.getElementById("btnExemplo");
+            const conteudo = document.getElementById("conteudo-exemplo");
+
+            btn.addEventListener("click", () => {
+                const expanded = btn.getAttribute("aria-expanded") === "true";
+                btn.setAttribute("aria-expanded", !expanded);
+                conteudo.hidden = expanded;
+            });
+        </script>
+
+    </div>
+
+    <h3>🔹 aria-label</h3>
+
+    <p>Serve para dar nome acessível a elementos que não têm texto visível.</p>
+
+    <div class="exemplo">
+        <button aria-label="Abrir menu de navegação">
+            ☰
+        </button>
+    </div>
+
+    <h3>🔹 aria-live</h3>
+
+    <p>Permite que leitores de tela anunciem mudanças automáticas no conteúdo.</p>
+
+    <div class="exemplo">
+        <div aria-live="polite" id="msgStatus">Status: pronto</div>
+        <script>
+            setTimeout(() => {
+                document.getElementById("msgStatus").innerText = "Status: carregando dados...";
+            }, 3000);
+        </script>
+    </div>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <h2>4. Tags e Práticas Essenciais de Acessibilidade no HTML5</h2>
+    <!-- ========================================================= -->
+
+    <h3>4.1 — Alternativas textuais</h3>
+    <ul>
+        <li><strong>alt</strong> obrigatório para imagens.</li>
+        <li>Evite alt: "" em imagens decorativas.</li>
+        <li>SVGs devem ter role="img" e aria-label.</li>
+    </ul>
+
+    <h3>4.2 — Estrutura semântica</h3>
+    <p>
+        Use tags corretas para permitir que leitores entendam a hierarquia:
+    </p>
+
+    <ul>
+        <li><strong>header</strong></li>
+        <li><strong>nav</strong></li>
+        <li><strong>main</strong></li>
+        <li><strong>section</strong></li>
+        <li><strong>article</strong></li>
+        <li><strong>footer</strong></li>
+    </ul>
+
+    <h3>4.3 — Títulos coerentes (h1-h6)</h3>
+    <p>Nunca pule níveis sem necessidade.</p>
+
+    <h3>4.4 — Contraste adequado</h3>
+    <p>
+        Recomendado: contraste mínimo de 4.5:1  
+        Teste: <a href="https://webaim.org/resources/contrastchecker/" target="_blank">Contrast Checker (WebAIM)</a>
+    </p>
+
+    <h3>4.5 — Labels sempre associados</h3>
+
+    <div class="exemplo">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome">
+    </div>
+
+    <h3>4.6 — Navegação por teclado</h3>
+    <p>
+        Todo site deve permitir navegação sem mouse.<br>
+        É possível testar usando a tecla TAB.
+    </p>
+
+    <hr>
+
+    <!-- ========================================================= -->
+    <h2>5. Exemplo Final — Bloco Acessível Completo</h2>
+    <!-- ========================================================= -->
+
+    <div class="exemplo">
+        <h3>Formulário acessível completo</h3>
+
+        <form aria-labelledby="formTitulo">
+            <h4 id="formTitulo">Formulário de Contato</h4>
+
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" aria-required="true"><br><br>
+
+            <label for="mensagem">Mensagem</label><br>
+            <textarea id="mensagem" aria-required="true"></textarea><br><br>
+
+            <button type="submit" aria-label="Enviar mensagem para a equipe da clínica">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+    <hr>
+
+    <h2>6. Referências Bibliográficas — Embasamento Técnico</h2>
+    <!-- ========================================================= -->
+    
+    <p>Todo o conteúdo foi embasado em fontes oficiais e confiáveis:</p>
+    
+    <ul>
+        <li>
+            W3C — Accessibility Standards  
+            <a href="https://www.w3.org/WAI/" target="_blank" rel="noopener noreferrer">
+                https://www.w3.org/WAI/
+            </a>
+        </li>
+    
+        <li>
+            WCAG 2.2 — Web Content Accessibility Guidelines  
+            <a href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener noreferrer">
+                https://www.w3.org/TR/WCAG22/
+            </a>
+        </li>
+    
+        <li>
+            HTML Living Standard — Atributos ARIA oficiais  
+            <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">
+                https://html.spec.whatwg.org/
+            </a>
+        </li>
+    
+        <li>
+            MDN Web Docs — Acessibilidade  
+            <a href="https://developer.mozilla.org/pt-BR/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">
+                https://developer.mozilla.org/pt-BR/docs/Web/Accessibility
+            </a>
+        </li>
+    
+        <li>
+            NVAccess — Ferramenta NVDA  
+            <a href="https://www.nvaccess.org" target="_blank" rel="noopener noreferrer">
+                https://www.nvaccess.org
+            </a>
+        </li>
+    
+        <li>
+            WebAIM — Acessibilidade na prática  
+            <a href="https://webaim.org/" target="_blank" rel="noopener noreferrer">
+                https://webaim.org/
+            </a>
+        </li>
+    </ul>    
+
+</body>
+</html>
